@@ -283,3 +283,6 @@ epub_copyright = u'2012, Arun Gupta'
 
 # Allow duplicate toc entries.
 #epub_tocdup = True
+
+locale_dirs = ["locale"]
+language = "ja"
