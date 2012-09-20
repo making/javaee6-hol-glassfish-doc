@@ -15,7 +15,7 @@ Java Persistence API (JPA) is a standard API that defines mapping between databa
 
 Click on "Next>".
 
-3. Enter the package name org.glassfish.samples.entities as shown.
+3. Enter the package name ``org.glassfish.samples.entities`` as shown.
 
 .. figure:: images/04-enter-entity-package.png
 
@@ -23,21 +23,21 @@ The database table name and the corresponding mapped class name is shown in the 
 
 .. note::
    Notice the following points:
-    * The first check box allows NetBeans to generate multiple @NamedQuery annotations on the JPA  entity. These annotations provide pre-defined JPQL queries that can be used to query the database.
-    * The second check box ensures that the @XmlRootElement annotation is generated on the JPA entity class so that it can be converted to an XML or JSON representation easily by JAXB. This feature is useful when the entities are published as a RESTful resource.
+    * The first check box allows NetBeans to generate multiple ``@NamedQuery`` annotations on the JPA  entity. These annotations provide pre-defined JPQL queries that can be used to query the database.
+    * The second check box ensures that the ``@XmlRootElement`` annotation is generated on the JPA entity class so that it can be converted to an XML or JSON representation easily by JAXB. This feature is useful when the entities are published as a RESTful resource.
     * The third check box generates the required Persistence Unit required by JPA.
 
 Click on "Finish" to complete the entity generation.
 
-In NetBeans, expand "Source Packages", org.glassfish.samples.entities, and double-click Customer.java.
+In NetBeans, expand "Source Packages", ``org.glassfish.samples.entities``, and double-click ``Customer.java``.
 
 .. note::
    Notice the following points in the generated code:
 
-    * The generated class-level @NamedQuery annotations uses JPQL to define several queries. One of the queries is named "Customer.findAll" which maps to the JPQL that retrieves all rows from the database. There are several "findBy" queries, one for each field (which maps to a column in the table), that allows to query the data for that specific field. Additional queries may be added here providing a central location for all your query-related logic.
+    * The generated class-level ``@NamedQuery`` annotations uses JPQL to define several queries. One of the queries is named "Customer.findAll" which maps to the JPQL that retrieves all rows from the database. There are several "findBy" queries, one for each field (which maps to a column in the table), that allows to query the data for that specific field. Additional queries may be added here providing a central location for all your query-related logic.
     * The bean validation constraints are generated on each field based upon the schema definition. These constraints are then used by the validator included in the JPA implementation before an entity is saved, updated, or removed from the database.
     * The regular expression-based constraint may be used to enforce phone or zipcode in a particular format.
-    * The zip and discountCode fields are marked with the @JoinColumn annotation  creating a join with the appropriate table.
+    * The ``zip`` and ``discountCode`` fields are marked with the ``@JoinColumn`` annotation  creating a join with the appropriate table.
 
 Walk-through the JPA Entities and Refactor to Simplify
 --------------------------------------------------------------------------------------
@@ -45,7 +45,7 @@ Walk-through the JPA Entities and Refactor to Simplify
 .. note::
    This section will customize the generated JPA entities to make them more intuitive for a Java developer.
    
-1.  Edit Customer.java and change the class structure to introduce an embeddable class for street, city, country, and zip fields as these are logically related entities. 
+1.  Edit ``Customer.java`` and change the class structure to introduce an embeddable class for ``street``, ``city``, ``country``, and ``zip`` fields as these are logically related entities. 
 
 Replace the following code:
 
@@ -87,21 +87,21 @@ Click on the yellow bulb in the left bar to create a new class in the current pa
 
     * The two blocks of code above are not adjacent.
     * Copy/pasting only the fields will show a red line under some of the methods in your entity but will be fixed later.
-    * The @Embedded annotation ensures that this field's value is an instance of an embeddable class.
+    * The ``@Embedded`` annotation ensures that this field's value is an instance of an embeddable class.
 
 
-2. Change Address.java so that it is a public class, annotate with @Embeddable such that it can be used as embeddable class, and also implement the Serializable interface. The updated class definition is shown:
+2. Change ``Address.java`` so that it is a public class, annotate with ``@Embeddable`` such that it can be used as embeddable class, and also implement the ``Serializable`` interface. The updated class definition is shown:
 
 .. code-block:: java
 
     @javax.persistence.Embeddable
     public class Address implements java.io.Serializable {
     
-3. In Address.java, paste the different fields code replaced from Customer.java and add getter/setters for each field. The methods can be easily generated by going to the "Source", "Insert Code...", selecting "Getter and Setter...", selecting all the fields, and then clicking on "Generate".
+3. In ``Address.java``, paste the different fields code replaced from ``Customer.java`` and add getter/setters for each field. The methods can be easily generated by going to the "Source", "Insert Code...", selecting "Getter and Setter...", selecting all the fields, and then clicking on "Generate".
 
 Fix all the imports by right-clicking in the editor, selecting "Fix Imports...", and taking all the defaults.
 
-4. Make the following changes in Customer.java:
+4. Make the following changes in ``Customer.java``:
 
 i. Remove the getter/setter for the previously removed fields.
 ii. Add a new getter/setter for "address" field as:
@@ -111,7 +111,7 @@ ii. Add a new getter/setter for "address" field as:
     public Address getAddress() { return address; }
     public void setAddress(Address address) { this.address = address; }
 
-iii. Change the different @NamedQuery to reflect the nested structure for Address by editing the queries identified by Customer.findByAddressline1, Customer.findByAddressline2, Customer.findByCity, and Customer.findByState such that c.addressline1, c.addressline2, c.city, and c.state is replaced with c.address.addressline1, c.address.addressline2, c.address.city, and c.address.state respectively.
+iii. Change the different ``@NamedQuery`` to reflect the nested structure for Address by editing the queries identified by ``Customer.findByAddressline1``, ``Customer.findByAddressline2``, ``Customer.findByCity``, and ``Customer.findByState`` such that ``c.addressline1``, ``c.addressline2``, ``c.city``, and ``c.state`` is replaced with ``c.address.addressline1``, ``c.address.addressline2``, ``c.address.city``, and ``c.address.state`` respectively.
 
 Here is one of the updated query:
 
