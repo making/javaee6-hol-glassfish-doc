@@ -1,0 +1,9 @@
+<table>
+<tr>
+<th>Attribute</th>
+<th>Purpose</th>
+</tr>
+event	Event of the applied component for which the Ajax action is fired, onkeyup in this case.
+render	List of components that will be rendered after the Ajax action is complete. This enables “partial page rendering”.
+listener	Method listening for the Ajax event to be fired. This method must take AjaxBehaviorEvent as the only parameter and return a void.
+</table>
