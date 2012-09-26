@@ -1,0 +1,191 @@
+# Japanese translations for Java EE 6 Hands-on Lab package.
+# Copyright (C) 2012, Arun Gupta
+# This file is distributed under the same license as the Java EE 6 Hands-on Lab package.
+# Toshiaki Maki <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Java EE 6 Hands-on Lab 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-26 20:42\n"
+"PO-Revision-Date: 2012-09-26 20:37+0900\n"
+"Last-Translator: Toshiaki Maki <>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 4e167556d9e049df99e8b1f8d9c0526d
+#: ../../source/17-cross-cutting-concerns-using-cdi-interceptors.rst:2
+msgid "Cross-cutting Concerns using CDI Interceptors"
+msgstr "CDIのインタセプターを用いた横断的関心毎の実装"
+
+# 3279de70c1d54c078cc82d63a999660d
+#: ../../source/17-cross-cutting-concerns-using-cdi-interceptors.rst:4
+msgid ""
+"The Interceptors do what they say – they intercept on invocation and "
+"lifecycle events on an associated target class. They are used to implement "
+"cross-cutting concerns like logging and auditing. The Interceptors "
+"specification is extracted from the EJB specification into a new "
+"specification so that they can more generically applied to a broader set of "
+"specifications."
+msgstr ""
+
+# 75f376181709401db2aa46836d7bf2b1
+#: ../../source/17-cross-cutting-concerns-using-cdi-interceptors.rst:6
+msgid ""
+"The CDI specification enhances the basic functionality by providing an "
+"annotation-based approach to binding interceptors to beans. The target class "
+"may specify multiple interceptors thus forming a chain of interceptors."
+msgstr ""
+
+# 466c6b4b15da4c7d9391b8cabbc79953
+#: ../../source/17-cross-cutting-concerns-using-cdi-interceptors.rst:9
+msgid ""
+"This section will explain how to add an interceptor that intercepts all the "
+"business method invocations and logs them."
+msgstr ""
+
+# 24631c0f0bf943139d13f65798d852ef
+#: ../../source/17-cross-cutting-concerns-using-cdi-interceptors.rst:12
+msgid ""
+"Right-click on the project, select “New”, “Other...”, “Contexts and "
+"Dependency Injection”, “Interceptor Binding Type” as shown."
+msgstr ""
+
+# a0eb35949d19421ea45eae374c27ccf6
+#: ../../source/17-cross-cutting-concerns-using-cdi-interceptors.rst:14
+msgid "Click on “Next>”."
+msgstr ""
+
+# 8efccb966c694396b541e77b0782e157
+#: ../../source/17-cross-cutting-concerns-using-cdi-interceptors.rst:18
+msgid ""
+"Give the class name as “Logging” and choose the package name as “org."
+"glassfish.samples”, and click on “Finish”."
+msgstr ""
+
+# 4e8dc6fe313444bf91dde7c60a5d6581
+#: ../../source/17-cross-cutting-concerns-using-cdi-interceptors.rst:20
+msgid ""
+"This defines the interceptor binding type which is specified on the target "
+"class. This binding can have multiple implementations which can be enabled "
+"or disabled at deployment using ``beans.xml``."
+msgstr ""
+
+# 433e93ebb5654a34b40b80659304f25b
+#: ../../source/17-cross-cutting-concerns-using-cdi-interceptors.rst:22
+msgid "The generated binding consists of the following code:"
+msgstr ""
+
+# fcf606aa4ab040c2aa68f31dbedfe235
+#: ../../source/17-cross-cutting-concerns-using-cdi-interceptors.rst:34
+msgid ""
+"Implement (or bind) the interceptor by creating a POJO class and naming it "
+"“LoggingInterceptor”. Change the class definition to:"
+msgstr ""
+
+# 4ba1adf6a7924c12a8bc57940f2369c1
+#: ../../source/17-cross-cutting-concerns-using-cdi-interceptors.rst:53
+msgid "Resolve the imports."
+msgstr ""
+
+# 4973f13e5d9d4a3aa5185715d6c21078
+#: ../../source/17-cross-cutting-concerns-using-cdi-interceptors.rst:56
+msgid "Notice the following points in the code:"
+msgstr ""
+
+# e60e0f0a40b141ecb86775cd31bfba9f
+#: ../../source/17-cross-cutting-concerns-using-cdi-interceptors.rst:58
+msgid ""
+"This class has the ``@Logging`` annotation which is the binding type "
+"generated earlier."
+msgstr ""
+
+# 4e0e05b01f91465e94c17b4ce3eaab31
+#: ../../source/17-cross-cutting-concerns-using-cdi-interceptors.rst:59
+msgid ""
+"It has the @Interceptor annotation marking this class to be an interceptor "
+"implementation."
+msgstr ""
+
+# 49bb0c52e1204136949950f63085e316
+#: ../../source/17-cross-cutting-concerns-using-cdi-interceptors.rst:60
+msgid ""
+"The @AroundInvoke annotation defines the method that will intercept the "
+"business method invocation on the target class and require the signature as "
+"shown in the code. An interceptor implementation cannot have more than one "
+"``@AroundInvoke`` method."
+msgstr ""
+
+# 54823093a08241ab9a2440a63a099064
+#: ../../source/17-cross-cutting-concerns-using-cdi-interceptors.rst:61
+msgid ""
+"The InvocationContext parameter provides information about the intercepted "
+"invocation and provide operations to control the behavior of the chain "
+"invocation."
+msgstr ""
+
+# b4ebb1789d4541a29f6093749a75a0c3
+#: ../../source/17-cross-cutting-concerns-using-cdi-interceptors.rst:62
+msgid ""
+"This method prints a log message, with the name of the business method being "
+"invoked, before and after the business method execution."
+msgstr ""
+
+# 5d26fd58cf8640fd9e0857ef9b311cb5
+#: ../../source/17-cross-cutting-concerns-using-cdi-interceptors.rst:65
+msgid ""
+"The interceptors may be specified on the target class using the "
+"``@Interceptors`` annotation which suffers from stronger coupling to the "
+"target class and not able to change the ordering globally. The recommended "
+"way to enable interceptors is by specifying them in beans.xml."
+msgstr ""
+
+# 4af0a4f0ba434789ad9dc786c62e8b5b
+#: ../../source/17-cross-cutting-concerns-using-cdi-interceptors.rst:67
+msgid "Add the following fragment to beans.xml to enable the interceptor:"
+msgstr ""
+
+# 56331a50a904461ea7b4501a4bfdaa5d
+#: ../../source/17-cross-cutting-concerns-using-cdi-interceptors.rst:76
+msgid ""
+"The interceptors may be specified at a class- or a method-level. Lets "
+"intercept all invocations of the ``getCustomers2`` method in "
+"``CustomerSessionBean.java``. This can be done by adding the following "
+"annotation right above the method:"
+msgstr ""
+
+# ba3b50d7fc904cb780c25b108fef592e
+#: ../../source/17-cross-cutting-concerns-using-cdi-interceptors.rst:78
+msgid "@Logging"
+msgstr ""
+
+# e0a1f3b9c959411cbb48489c5031cc6f
+#: ../../source/17-cross-cutting-concerns-using-cdi-interceptors.rst:80
+msgid "This is the same binding type that we created earlier."
+msgstr ""
+
+# b3719d162a544ba3a9c16736ab72aa49
+#: ../../source/17-cross-cutting-concerns-using-cdi-interceptors.rst:83
+msgid ""
+"Access the URL  “http://localhost:8080/JavaEE6SampleApp/TestServlet” in a "
+"browser which invokes ``CustomerSessionBean.getCustomers2`` method and "
+"displays the output as shown. This is very similar output as we've seen "
+"earlier."
+msgstr ""
+
+# 92d009756bd741c3b3dfff710f573885
+#: ../../source/17-cross-cutting-concerns-using-cdi-interceptors.rst:88
+msgid "The interesting part is shown in the GlassFish log as shown:"
+msgstr ""
+
+# 806f309c3f8748228d2eefba6bb227bc
+#: ../../source/17-cross-cutting-concerns-using-cdi-interceptors.rst:95
+msgid ""
+"It shows “BEFORE” and “AFTER” string along with the business method name and "
+"return type. These statements are printed from the interceptor "
+"implementation."
+msgstr ""

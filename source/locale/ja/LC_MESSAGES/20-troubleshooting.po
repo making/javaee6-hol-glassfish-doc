@@ -1,0 +1,182 @@
+# Japanese translations for Java EE 6 Hands-on Lab package.
+# Copyright (C) 2012, Arun Gupta
+# This file is distributed under the same license as the Java EE 6 Hands-on Lab package.
+# Toshiaki Maki <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Java EE 6 Hands-on Lab 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-26 20:42\n"
+"PO-Revision-Date: 2012-09-26 20:37+0900\n"
+"Last-Translator: Toshiaki Maki <>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# d7474bf4eea2446ca5be225689a02ace
+#: ../../source/20-troubleshooting.rst:2
+msgid "Troubleshooting"
+msgstr "トラブルシューティング"
+
+# 0ddfc47612a14fdc9a82349408610aee
+#: ../../source/20-troubleshooting.rst:4
+msgid ""
+"The project is getting deployed to GlassFish every time a file is saved. How "
+"can I disable/enable that feature ?"
+msgstr ""
+
+# 195244ecb5424c06b24da15a6869ec69
+#: ../../source/20-troubleshooting.rst:6
+msgid ""
+"This feature can be enabled/disable per project basis from the Properties "
+"window. Right-click on the project, select “Properties”, choose “Run” "
+"categories and select/unselect the checkbox “Deploy on Save” to enable/"
+"disable this feature."
+msgstr ""
+
+# cae6156fc4904badbaf506b45c8ab61a
+#: ../../source/20-troubleshooting.rst:11
+msgid "How can I show the SQL queries issued to the database ?"
+msgstr ""
+
+# 6bef7d7575b04cada16b86cdfb37cb91
+#: ../../source/20-troubleshooting.rst:13
+msgid ""
+"In NetBeans IDE, expand “Configuration Files”, edit “persistence.xml” and "
+"replace:"
+msgstr ""
+
+# 60b55a4cf167485b9f99fc9dd49173e9
+#: ../../source/20-troubleshooting.rst:19
+msgid "with"
+msgstr ""
+
+# a7b10d9d60de463c83fc60556e5e97f3
+#: ../../source/20-troubleshooting.rst:28
+msgid "How can I start/stop/restart GlassFish from within the IDE ?"
+msgstr ""
+
+# 2215ef0bdaae440fb04ec2893759fdb9
+#: ../../source/20-troubleshooting.rst:30
+msgid ""
+"In the “Services” tab, right-click on “GlassFish Server 3.1”. All the "
+"commands to start, stop, and restart are available from the pop-up menu. The "
+"server log can be viewed by clicking on “View Server Log” and web-based "
+"administration console can be seen by clicking on “View Admin Console”."
+msgstr ""
+
+# e297988d19c043b6b4b3b284e4df92ca
+#: ../../source/20-troubleshooting.rst:34
+msgid "How to recreate the NetBeans sample database ?"
+msgstr ""
+
+# 95599043c2664c49b09a4b94282759a7
+#: ../../source/20-troubleshooting.rst:36
+msgid ""
+"Find the location of database in “Services” tab of NetBeans, right-clicking "
+"on “JavaDB”. The default location is .netbeans-derby in your home directory. "
+"Close NetBeans and delete this directory."
+msgstr ""
+
+# 8bf6cbff692f495681a8d129cd5c354e
+#: ../../source/20-troubleshooting.rst:37
+msgid "Remove .netbeans directory in your home directory."
+msgstr ""
+
+# d7840e3908234b2eb3aed9bc15200d40
+#: ../../source/20-troubleshooting.rst:38
+msgid ""
+"Start NetBeans and the database will be recreated and new records will "
+"deployed into Sample database."
+msgstr ""
+
+# ae8f0e58d9584c7983dae997e8bb1f2a
+#: ../../source/20-troubleshooting.rst:40
+msgid ""
+"I accidentally closed the GlassFish output log window. How do I bring it "
+"back ?"
+msgstr ""
+
+# dfd877e70610463eb672cf68060275ff
+#: ../../source/20-troubleshooting.rst:42
+msgid ""
+"In “Services” tab of NetBeans, expand “Servers”, choose the GlassFish node, "
+"and select “View Domain Server Log”."
+msgstr ""
+
+# b7b931dbe2de408e86cb7432fb1c48e0
+#: ../../source/20-troubleshooting.rst:47
+msgid ""
+"The method with ``@Schedule`` are not printing the output on desired "
+"intervals."
+msgstr ""
+
+# 7d7e82618884400dae4475ca8f51420f
+#: ../../source/20-troubleshooting.rst:49
+msgid "The GlassFish output window may be showing the following log message:"
+msgstr ""
+
+# 084782bf9d424c9d84d98e8c8a33769a
+#: ../../source/20-troubleshooting.rst:55
+msgid ""
+"This can be fixed if you right-click on the project and select “Deploy”, "
+"right-click again now select “Run”."
+msgstr ""
+
+# b92889305da94989a1201321c1a338c9
+#: ../../source/20-troubleshooting.rst:58
+msgid ""
+"The namespace prefix for the composite component is not getting resolved."
+msgstr ""
+
+# 8226613da3ee41bab8b681d2801ed241
+#: ../../source/20-troubleshooting.rst:60
+msgid ""
+"This may happen if the namespace prefix was manually specified during the "
+"composite component creation. In this case you need to add the following "
+"namespace prefix mapping to the .xhtml document:"
+msgstr ""
+
+# 6b5331a6c29440ba9d08f683b4aed813
+#: ../../source/20-troubleshooting.rst:67
+msgid ""
+"I clicked Cancel when the wizard for specifying the base URL for the RESTful "
+"resources showed. How do I generate the class now ?"
+msgstr ""
+
+# 9bf338e1b6f3456386c47de45a4d95b6
+#: ../../source/20-troubleshooting.rst:69
+msgid ""
+"Right-click on “org.glassfish.samples” package, select “New”, “Java "
+"Class...”, specify the name as “ApplicationConfig”. Change the generated "
+"source code to:"
+msgstr ""
+
+# efbeaa789a184a2b83798d1ee49b6bd2
+#: ../../source/20-troubleshooting.rst:78
+msgid "The database server is not getting started."
+msgstr ""
+
+# f1884998d2124a3cbbf8236df43da2c3
+#: ../../source/20-troubleshooting.rst:81
+msgid ""
+"In “Services” tab, right-click on “JavaDB” and click on Properties. It shows "
+"the location of JavaDB and the directory where the sample database is "
+"installed. Make sure both the directories exist."
+msgstr ""
+
+# 0bf40997c5bb45769b04418babdaac56
+#: ../../source/20-troubleshooting.rst:82
+msgid ""
+"Manually start the database by right-clicking on “JavaDB” and selecting "
+"“Start Server”."
+msgstr ""
+
+# 7c3ebf74474746e9a1921f949ec03cb7
+#: ../../source/20-troubleshooting.rst:83
+msgid "Refer to 20.4 if the sample database has no records."
+msgstr ""

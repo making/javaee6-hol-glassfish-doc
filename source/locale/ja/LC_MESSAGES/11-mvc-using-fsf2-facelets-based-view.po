@@ -1,0 +1,289 @@
+# Japanese translations for Java EE 6 Hands-on Lab package.
+# Copyright (C) 2012, Arun Gupta
+# This file is distributed under the same license as the Java EE 6 Hands-on Lab package.
+# Toshiaki Maki <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Java EE 6 Hands-on Lab 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-26 20:42\n"
+"PO-Revision-Date: 2012-09-26 20:37+0900\n"
+"Last-Translator: Toshiaki Maki <>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# f8c5504427584aa9bf14288494fd5de2
+#: ../../source/11-mvc-using-fsf2-facelets-based-view.rst:2
+msgid "MVC using JSF2/Facelets-based view"
+msgstr "JSF2とFaceletsベースなビューを用いたMVC"
+
+# f6bc48ba24f546a7808bb27ef60c87eb
+#: ../../source/11-mvc-using-fsf2-facelets-based-view.rst:4
+msgid ""
+"JavaServer Faces 2 allows Facelets to be used as the view templates. This "
+"has huge benefits as Facelets are created using only XHTML and CSS and rest "
+"of the business logic is contained in the backing beans. This ensures that "
+"MVC architecture recommended by JSF can be easily achieved. The model is "
+"provided by the JPA entity, the view is served by JSF2, and controller is an "
+"EJB. Even though JSPs can still be used as view templates but Facelets are "
+"highly recommended with JSF2."
+msgstr ""
+
+# 02c578182c004dee99f14ee2b3c31cde
+#: ../../source/11-mvc-using-fsf2-facelets-based-view.rst:6
+msgid ""
+"The Contexts and Dependency Injection (CDI) is a new specification in the "
+"Java EE 6 platform and bridges the gap between the transactional and the Web "
+"tier by allowing EJBs to be used as the “backing beans” of the JSF pages. "
+"This eliminates the need for any “glue code”, such as JSF managed beans, and "
+"there by further simplifying the Java EE platform."
+msgstr ""
+
+# 81abaeed37aa44ada6072fb664b59cd4
+#: ../../source/11-mvc-using-fsf2-facelets-based-view.rst:9
+msgid ""
+"This section adds JSF support to the application and display the list of "
+"customers in a Facelets-based view. The EJB methods will be invoked in the "
+"Expression Language to access the database."
+msgstr ""
+
+# fd73b2583a5046a2a2d8391b0fb06eb6
+#: ../../source/11-mvc-using-fsf2-facelets-based-view.rst:12
+msgid ""
+"The CDI specification require beans.xml in the WEB-INF directory to enable "
+"injection of beans within a WAR file. This will allow to use the EJB in an "
+"Expression Language (EL), such as .xhtml pages that will be created later."
+msgstr ""
+
+# 4c6829e4d38943deaaaeb5067db10cba
+#: ../../source/11-mvc-using-fsf2-facelets-based-view.rst:14
+msgid ""
+"Right-click on the project, say “New”, “Other...”, choose “Contexts and "
+"Dependency Injection”, select “beans.xml (CDI Configuration File)” as shown."
+msgstr ""
+
+# e1ec5902ac844a088726bb40b76ca71f
+#: ../../source/11-mvc-using-fsf2-facelets-based-view.rst:18
+msgid "Click on “Next>”, take all the defaults as shown."
+msgstr ""
+
+# 92e0076358e24bdcbf05b4272773a10e
+# 0a7233dca9734a94bfa975a7055151f4
+#: ../../source/11-mvc-using-fsf2-facelets-based-view.rst:20
+#: ../../source/11-mvc-using-fsf2-facelets-based-view.rst:72
+msgid "Click on “Finish”."
+msgstr ""
+
+# c48f38e12e3c454ea2bc9db58ef2f208
+#: ../../source/11-mvc-using-fsf2-facelets-based-view.rst:22
+msgid ""
+"This generates an empty ``beans.xml`` file in the ``WEB-INF`` folder and "
+"ensures that all POJOs in the WAR file are available for injection."
+msgstr ""
+
+# 17d6406600444ccfb89f8da0d92bec1b
+#: ../../source/11-mvc-using-fsf2-facelets-based-view.rst:25
+msgid ""
+"Add ``@javax.inject.Named`` CDI qualifier on the ``CustomerSessionBean`` "
+"class. This is a pre-defined CDI qualifier (explained later) and ensures "
+"that the EJB can now be injected in an expression language."
+msgstr ""
+
+# 8461630c1cc84acbb824b85bce181494
+#: ../../source/11-mvc-using-fsf2-facelets-based-view.rst:28
+msgid ""
+"Right-click on the project, select “Properties”, “Frameworks”, “Add...”, and "
+"select “JavaServer Faces” as shown. Click on “OK”, take the default "
+"configuration, and click on “OK” again."
+msgstr ""
+
+# de54af37fb574a2cbddc52e1b0c09632
+#: ../../source/11-mvc-using-fsf2-facelets-based-view.rst:31
+msgid ""
+"With JSF 2.0 implementation in GlassFish, if any JSF-specific annotations "
+"are used in the application then the framework is automatically registered "
+"by the underlying Web container. But since our application is not using any "
+"such annotation so we have to explicitly enable it."
+msgstr ""
+
+# b08877b4586b49fc96dad60e70afa1f5
+#: ../../source/11-mvc-using-fsf2-facelets-based-view.rst:33
+msgid ""
+"Adding the framework in this case will generate a web.xml which registers "
+"the “FaceServlet” using the “/faces” URL pattern. It also generates ``index."
+"xhtml`` page which can be verified by viewing “http://localhost:8080/"
+"JavaEE6SampleApp/faces/index.xhtml” with the output as shown."
+msgstr ""
+
+# 18ef0c3116cd4741a65aafe2666d9d96
+#: ../../source/11-mvc-using-fsf2-facelets-based-view.rst:37
+msgid ""
+"JSF2 allows to create XHTML/CSS-based templates that can be used for "
+"providing a consistent look-and-feel for different pages of your website. "
+"Lets create a template first and then use it in our web page."
+msgstr ""
+
+# b36ed6a488f34ab9b56655b3fc2a2376
+#: ../../source/11-mvc-using-fsf2-facelets-based-view.rst:39
+msgid ""
+"Right-click on the project, select “New”, “Other”, “JavaServer Faces”, "
+"“Facelets Template...”, change the name to “template”, click on “Browse...”, "
+"select the “WEB-INF” folder, and select the template as shown. Click on "
+"“Finish”."
+msgstr ""
+
+# bdaf8f687dc243f58fe98b0b07fa3025
+#: ../../source/11-mvc-using-fsf2-facelets-based-view.rst:44
+msgid ""
+"This generates ``WEB-INF/template.xhtml`` and two stylesheets in the "
+"resources/css folder. NetBeans contains a pre-defined set of templates and "
+"additional ones can be created using XHTML/CSS."
+msgstr ""
+
+# cb54dd8fa1554b13a1d3e6eb0e4440b3
+#: ../../source/11-mvc-using-fsf2-facelets-based-view.rst:45
+msgid ""
+"The ``template.xhtml`` page contains three ``<div>`` s with ``<ui:insert>`` "
+"named “top”, “content”, and “bottom”. These are placeholders for adding "
+"content to provide a consistent look-and-feel."
+msgstr ""
+
+# edd9b148f99a43fca7024dc3fe48e0cf
+#: ../../source/11-mvc-using-fsf2-facelets-based-view.rst:46
+msgid ""
+"Its a recommended practice to keep the template pages in the WEB-INF folder "
+"to restrict their visibility to the web application."
+msgstr ""
+
+# 3ff990d209ee4a52a94f2921308881a5
+#: ../../source/11-mvc-using-fsf2-facelets-based-view.rst:49
+msgid ""
+"In the generated ``template.xhtml``, replace the text “Top” (inside ``<ui:"
+"insert name=\"top\">``) with:"
+msgstr ""
+
+# fa8e9006c3a341508d4693c9fc4d7808
+#: ../../source/11-mvc-using-fsf2-facelets-based-view.rst:55
+msgid ""
+"and replace the text “Bottom” with (inside ``<ui:insert name=\"bottom\">``) "
+"with:"
+msgstr ""
+
+# 4302570604184cdf827ee90712cc7518
+#: ../../source/11-mvc-using-fsf2-facelets-based-view.rst:61
+msgid ""
+"The “top” and “bottom” ``<div>`` s will be used in other pages in our "
+"application to provide a consistent look-and-feel for the web application. "
+"The “content” ``<div>`` will be overridden in other pages to display the "
+"business components."
+msgstr ""
+
+# 3bb9f7c35770401498a9a67cdecae3eb
+#: ../../source/11-mvc-using-fsf2-facelets-based-view.rst:64
+msgid ""
+"Now lets re-generate ``index.xhtml`` to use this template. This page, called "
+"as “client page”, will use the header and the footer from the template page "
+"and override the required ``<div>`` s using ``<ui:define>``. The rest of the "
+"section is inherited from the template page."
+msgstr ""
+
+# a073b878351b4602800cebd2bed7869a
+#: ../../source/11-mvc-using-fsf2-facelets-based-view.rst:66
+msgid "First, delete ``index.xhtml`` by right-clicking and selecting “Delete”."
+msgstr ""
+
+# b01e00400e11451eb759feb898dbccc9
+#: ../../source/11-mvc-using-fsf2-facelets-based-view.rst:69
+msgid ""
+"Right-click on “Web Pages”, select “New”, “Other”, “JavaServer Faces” in "
+"Categories and “Facelets Template Client”... in File Types. Click on "
+"“Next>”. Enter the file name as “index”, choose the “Browse...” button next "
+"to “Template:” text box, select “template.xhtml” as shown, and click on "
+"“Select File”."
+msgstr ""
+
+# e67605e132ff438ab56417522ba835ed
+#: ../../source/11-mvc-using-fsf2-facelets-based-view.rst:76
+msgid ""
+"The generated page, ``index.xhtml``, has ``<ui:composition template='./WEB-"
+"INF/template.xhtml'>`` indicating that this page is using the template page "
+"created earlier."
+msgstr ""
+
+# 91c7727260654060a1c027cdd04e4b73
+#: ../../source/11-mvc-using-fsf2-facelets-based-view.rst:77
+msgid ""
+"It has three ``<ui:define>`` elements, instead of ``<ui:insert>`` in the "
+"template, with the exact same name as in the template. This allows specific "
+"sections of the template page to be overridden. The sections that are not "
+"overridden are picked up from the template."
+msgstr ""
+
+# ac7d3d8f91ce4b62906f58bb51fedab1
+#: ../../source/11-mvc-using-fsf2-facelets-based-view.rst:80
+msgid ""
+"Refresh “http://localhost:8080/JavaEE6SampleApp/faces/index.xhtml” to see "
+"the output as:"
+msgstr ""
+
+# 2da3b372598c4097b848677368a29ea9
+#: ../../source/11-mvc-using-fsf2-facelets-based-view.rst:82
+msgid ""
+"The output displays three sections from the ``index.xhtml`` file as "
+"generated by the NetBeans wizard."
+msgstr ""
+
+# b28e55b91b9448b6b80f5ebaa1ffd3ea
+#: ../../source/11-mvc-using-fsf2-facelets-based-view.rst:85
+msgid ""
+"In ``index.xhtml``, delete the ``<ui:define>`` element with name “top” and "
+"“bottom” as these sections are already defined in the template."
+msgstr ""
+
+# 1100098759864cb9bbf67e916bf387f2
+#: ../../source/11-mvc-using-fsf2-facelets-based-view.rst:88
+msgid "Replace the text “content” (inside <ui:define name=\"content\">) with:"
+msgstr ""
+
+# 11b05f342e3a49128d538f25d16cdcb3
+#: ../../source/11-mvc-using-fsf2-facelets-based-view.rst:107
+msgid ""
+"This JSF fragment injects ``CustomerSessionBean`` into the expression "
+"language, invokes its ``getCustomers`` method, iterates through all the "
+"values, and then displays the name and id of each customer. It also displays "
+"table and column headers."
+msgstr ""
+
+# 90e697e2a2e74584aebb242cddc81905
+#: ../../source/11-mvc-using-fsf2-facelets-based-view.rst:109
+msgid ""
+"The ``f`` and ``h`` prefix used in the fragment is not referring to any "
+"namespace. This needs to be fixed by clicking on the yellow bulb as shown. "
+"Select the proposed fix. Repeat this fix for f prefix as well."
+msgstr ""
+
+# 14b1416e35764a37a75beedad69547c3
+#: ../../source/11-mvc-using-fsf2-facelets-based-view.rst:114
+msgid ""
+"Refreshing the page “http://localhost:8080/JavaEE6SampleApp/faces/index."
+"xhtml” displays the result as shown."
+msgstr ""
+
+# 8c74b31b33fb44998da5fe0276a5e9db
+#: ../../source/11-mvc-using-fsf2-facelets-based-view.rst:116
+msgid ""
+"As you can see, the “top” and “bottom” sections are being inherited from the "
+"template and the “content” section is picked up from index.xhtml."
+msgstr ""
+
+# 7581eb705d534ab9b5249bf739409c17
+#: ../../source/11-mvc-using-fsf2-facelets-based-view.rst:118
+msgid ""
+"Additional pages can be added to this web application using the same "
+"template and thus providing consistent look-and-feel."
+msgstr ""

@@ -1,0 +1,103 @@
+# Japanese translations for Java EE 6 Hands-on Lab package.
+# Copyright (C) 2012, Arun Gupta
+# This file is distributed under the same license as the Java EE 6 Hands-on Lab package.
+# Toshiaki Maki <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Java EE 6 Hands-on Lab 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-26 20:42\n"
+"PO-Revision-Date: 2012-09-26 20:37+0900\n"
+"Last-Translator: Toshiaki Maki <>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 9963e7e9900e4feeaee473abb06c25dd
+#: ../../source/05-query-database-from-servlet.rst:2
+msgid "Query the Database from a Servlet"
+msgstr "サーブレットからデーターベースへ問い合わせ"
+
+# e1778ceb977f4e268c426064c406602d
+#: ../../source/05-query-database-from-servlet.rst:4
+msgid ""
+"In Java EE 6, Servlet can be easily defined using a POJO, with a single "
+"annotation, and optional ``web.xml`` in most of the common cases."
+msgstr ""
+
+# 6cab94e80d9d48ae9d44dfbd709e0ceb
+#: ../../source/05-query-database-from-servlet.rst:8
+msgid ""
+"This section will create a Servlet and invoke the ``@NamedQuery`` to query "
+"the database."
+msgstr ""
+
+# dbc649bbf1834291a6c41d205f935e0d
+#: ../../source/05-query-database-from-servlet.rst:10
+msgid ""
+"1. Right-click on the project, select “New”, “Servlet...”. Enter the class "
+"name as “TestServlet”, package as ``org.glassfish.samples``, and click on "
+"“Finish”."
+msgstr ""
+
+# 0b440ef2b46b4c9db38bfc8fb9b90fd3
+#: ../../source/05-query-database-from-servlet.rst:14
+msgid ""
+"Expand “Web Pages”, “WEB-INF” and notice that no ``web.xml`` is generated "
+"for describing this Servlet as all the information is captured in the "
+"``@WebServlet`` annotation."
+msgstr ""
+
+# 75e78fceb7be48238782f74c5bdf9e8b
+#: ../../source/05-query-database-from-servlet.rst:21
+msgid ""
+"2. Inject ``EntityManagerFactory`` in Servlet by adding the following code "
+"right after the class declaration:"
+msgstr ""
+
+# 2ef48012866a4995a0f1ed542ba53514
+#: ../../source/05-query-database-from-servlet.rst:28
+msgid "Resolve the imports by clicking on the yellow bulb"
+msgstr ""
+
+# bab231c2e6754eafafc17d8c6a661d8a
+#: ../../source/05-query-database-from-servlet.rst:30
+msgid ""
+"3. Add the code to use the injected ``EntityManagerFactory`` to query the "
+"database using a pre-generated ``@NamedQuery`` to retrieve all the "
+"customers. The updated try block looks like:"
+msgstr ""
+
+# cd212fd263234e24a5459cf5027f9cac
+#: ../../source/05-query-database-from-servlet.rst:54
+msgid ""
+"Since the Servlets are re-entrant and ``EntityManager`` is not thread safe, "
+"it needs to be obtained from an ``EntityManagerFactory`` during each method "
+"invocation. This is resolved when the database specific code is moved to an "
+"EJB later. Optionally, based upon the NetBeans version, you may have to un-"
+"comment the code in the try block of the processRequest method by removing "
+"the first and the last line in the try block."
+msgstr ""
+
+# 638d209a80a9430682e63583eb28da3c
+#: ../../source/05-query-database-from-servlet.rst:65
+msgid ""
+"Notice that no transactions are started or committed before/after the "
+"database operation as this is a read-only operation and does not have the "
+"demands of a real-life application. An explicit transaction has to be "
+"created and committed (or rollbacked) if either create, update, or delete "
+"operations are performed. In addition, JPA2 also provides support for "
+"optimistic and pessimistic locking by means of specified locking modes."
+msgstr ""
+
+# a644df59568246dcb73a4d89bffe5f52
+#: ../../source/05-query-database-from-servlet.rst:76
+msgid ""
+"4. Right-click in the editor pane, select “Run File”, choose the defaults, "
+"and click on OK. This displays “http://localhost:8080/JavaEE6SampleApp/"
+"TestServlet” page in the browser and looks like as shown."
+msgstr ""

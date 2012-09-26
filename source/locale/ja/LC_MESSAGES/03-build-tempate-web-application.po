@@ -1,0 +1,110 @@
+# Japanese translations for Java EE 6 Hands-on Lab package.
+# Copyright (C) 2012, Arun Gupta
+# This file is distributed under the same license as the Java EE 6 Hands-on Lab package.
+# Toshiaki Maki <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Java EE 6 Hands-on Lab 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-26 20:42\n"
+"PO-Revision-Date: 2012-09-26 20:36+0900\n"
+"Last-Translator: Toshiaki Maki <>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# dec4f3275d414acebff9a25a27d6a0d6
+#: ../../source/03-build-tempate-web-application.rst:2
+msgid "Build the Template Web Application"
+msgstr "テンプレートWebアプリケーションのビルド"
+
+# 6a1325f9bf0c4499bc852239f80f9842
+#: ../../source/03-build-tempate-web-application.rst:5
+msgid ""
+"This section will build a template Web application using the NetBeans IDE"
+msgstr ""
+
+# f0a873b06eb947da920e2adc3a6faf67
+#: ../../source/03-build-tempate-web-application.rst:7
+msgid ""
+"In NetBeans IDE, create a new Web application by selecting the \"File\", "
+"\"New Project\"."
+msgstr ""
+
+# 6b9162cfbd9a4e79a865ee86ff0a1b76
+#: ../../source/03-build-tempate-web-application.rst:8
+msgid "Choose \"Java Web\" as Categories and \"Web Application\" as Projects."
+msgstr ""
+
+# 6c80e2a912e64820bae39c44fdcbae5c
+#: ../../source/03-build-tempate-web-application.rst:10
+msgid "Click on \"Next>\"."
+msgstr ""
+
+# ae46b1092b204000b2832ab6fc2b2e8d
+#: ../../source/03-build-tempate-web-application.rst:14
+msgid ""
+"Specify the project name as \"JavaEE6SampleApp\" and click on \"Next>\"."
+msgstr ""
+
+# 55ca79120a334b58bf6a55760c6d85ad
+#: ../../source/03-build-tempate-web-application.rst:16
+msgid "Choose the pre-configured GlassFish Server 3.1 as the Server."
+msgstr ""
+
+# 9bbd4bf4bac948f09210b8fcf1a5c849
+#: ../../source/03-build-tempate-web-application.rst:21
+msgid ""
+"The actual server name may differ in your case, as in this case, if you have "
+"configured it externally. Ensure that the Java EE Version selected is \"Java "
+"EE 6 Web\" and click on \"Finish\"."
+msgstr ""
+
+# 08b70d9a8d2d465db9df00eac22c1644
+#: ../../source/03-build-tempate-web-application.rst:23
+msgid "This generates a template Web project."
+msgstr ""
+
+# 1cc732afaf444836a6465bbb452d6053
+#: ../../source/03-build-tempate-web-application.rst:26
+msgid ""
+"There is no web.xml in the WEB-INF folder as Java EE 6 makes it optional in "
+"most of the common cases."
+msgstr ""
+
+# e04514e7b7974dc490be376f42c77cfb
+#: ../../source/03-build-tempate-web-application.rst:28
+msgid ""
+"Right-click on the project and select \"Run\". This will start the chosen "
+"GlassFish server, deploy the Web application on the server, opens the "
+"default web browser, and displays \"http://localhost:8080/JavaEE6SampleApp/"
+"index.jsp\""
+msgstr ""
+
+# 1ebb9c73e60c4e6bbfe6651bcc38c7c5
+#: ../../source/03-build-tempate-web-application.rst:33
+msgid "The default page looks like as shown."
+msgstr ""
+
+# 485845717567413c8330ba6202a73ecb
+#: ../../source/03-build-tempate-web-application.rst:36
+msgid ""
+"Note that even though the index.jsp is not displayed in the URL window, this "
+"is the default file that is displayed."
+msgstr ""
+
+# 1903891c6a0a47bcb5da44693326811f
+#: ../../source/03-build-tempate-web-application.rst:38
+msgid ""
+"A display of this page ensures that the project is successfully created and "
+"GlassFish has started successfully as well. The GlassFish server comes "
+"bundled with the JavaDB and is pre-configured in NetBeans to start the "
+"database server as well. This can be changed by expanding the \"Servers\" "
+"tree in the \"Services\" tab, right-clicking on the chosen server,  "
+"selecting the properties, and selecting/unselecting the checkbox that says "
+"\"Start Registered Derby Server\"."
+msgstr ""

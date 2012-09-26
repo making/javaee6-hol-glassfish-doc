@@ -1,0 +1,59 @@
+# Japanese translations for Java EE 6 Hands-on Lab package.
+# Copyright (C) 2012, Arun Gupta
+# This file is distributed under the same license as the Java EE 6 Hands-on Lab package.
+# Toshiaki Maki <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Java EE 6 Hands-on Lab 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-26 20:42\n"
+"PO-Revision-Date: 2012-09-26 20:36+0900\n"
+"Last-Translator: Toshiaki Maki <>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 7896f6976d8f4ef68d8ad1cee427ef45
+#: ../../source/02-problem-statemant.rst:2
+msgid "Problem Statement"
+msgstr "問題の説明"
+
+# fa25b21ed115450ab1869750c6f8937b
+#: ../../source/02-problem-statemant.rst:4
+msgid ""
+"This hands-on lab builds a typical 3-tier Java EE 6 Web application that "
+"retrieves customer information from a database and displays it in a Web "
+"page. The application also allows new customers to be added to the database "
+"as well. The string-based and type-safe queries are used to query and add "
+"rows to the database. Each row in the database table is published as a "
+"RESTful resource and is then accessed programmatically. Typical design "
+"patterns required by a Web application like validation, caching, observer, "
+"partial page rendering, and cross-cutting concerns like logging are "
+"explained and implemented using different Java EE 6 technologies."
+msgstr ""
+
+# b20220fec99946ac9a39e640e3658504
+#: ../../source/02-problem-statemant.rst:6
+msgid ""
+"This application uses a sample database that comes pre-configured in both "
+"NetBeans \"All\" and \"Java EE\" downloaded bundled versions."
+msgstr ""
+"このアプリケーションでは設定済みのサンプルデーターベースを使用します。"
+"NetBeansの \"All\" and \"Java EE\" 両方に対応しています。"
+
+# 73be3736b99b4426a67797a30f1ac53f
+#: ../../source/02-problem-statemant.rst:10
+msgid ""
+"**Disclaimer**: This is a sample application and the code may not be "
+"following the best practices to prevent SQL injection, cross-side scripting "
+"attacks, escaping parameters, and other similar features expected of a "
+"robust enterprise application. This is intentional such as to stay focused "
+"on explaining the technology. Each of this topic can take its own hands-on "
+"lab and there is enough material available on the Internet. Its highly "
+"recommended to make sure that the code copied from this sample application "
+"is updated to meet those requirements."
+msgstr ""

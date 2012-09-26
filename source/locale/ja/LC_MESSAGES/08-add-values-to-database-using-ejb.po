@@ -1,0 +1,172 @@
+# Japanese translations for Java EE 6 Hands-on Lab package.
+# Copyright (C) 2012, Arun Gupta
+# This file is distributed under the same license as the Java EE 6 Hands-on Lab package.
+# Toshiaki Maki <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Java EE 6 Hands-on Lab 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-26 20:42\n"
+"PO-Revision-Date: 2012-09-26 20:37+0900\n"
+"Last-Translator: Toshiaki Maki <>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# a15156c172c9487a96c4ac1465c163ca
+#: ../../source/08-add-values-to-database-using-ejb.rst:2
+msgid "Add Values to the Database using EJB, use Bean Validation Constraints"
+msgstr "EJBを使用してデーターベースに値を追加し、Bean Validationで入力チェック"
+
+# 825fa257f25a478693c947674260b83d
+#: ../../source/08-add-values-to-database-using-ejb.rst:4
+msgid ""
+"Bean Validation is a new specification added to the Java EE 6 platform. This "
+"specification defines an extensible validation constraints mechanism, with a "
+"pre-defined set of constraints, that can be specified on field, method, "
+"type, or annotations. It also defines a validation facility for the Java "
+"application developer."
+msgstr ""
+
+# 4a98948fe09e4dc5bb431d8cc49f76c3
+#: ../../source/08-add-values-to-database-using-ejb.rst:9
+msgid ""
+"The constraints can be specified on a JPA entity and the validation facility "
+"ensure these are met during the pre-persist, pre-update, and pre-remove "
+"lifecycle events. These constraints can also be used on “backing beans” for "
+"forms displayed by JSF. This ensures that the data entered in the form meets "
+"the validation criteria."
+msgstr ""
+
+# 12f60d7be8b44d6098c985e56465cfb6
+#: ../../source/08-add-values-to-database-using-ejb.rst:15
+msgid ""
+"This section will explain how EJB can be used to add values to the database "
+"and Bean Validation constraints can be used to automatically validate the "
+"data."
+msgstr ""
+
+# f7df147ac60a4a59856b11c6ddd7ebd6
+#: ../../source/08-add-values-to-database-using-ejb.rst:18
+msgid "Add a new method to the EJB as:"
+msgstr ""
+
+# 0d3e2c36c91e4374ad8b365e333f9d22
+#: ../../source/08-add-values-to-database-using-ejb.rst:40
+msgid ""
+"This method takes a few parameters and adds a new customer to the database "
+"by calling the ``persist`` method on the ``EntityManager``."
+msgstr ""
+
+# 6de5737af927498fa699a7c2c0066937
+#: ../../source/08-add-values-to-database-using-ejb.rst:43
+msgid ""
+"Resolve the imports by taking default value for ``DiscountCode`` class but "
+"make sure ``Address`` class is imported from ``org.glassfish.samples."
+"Address`` instead of the default value."
+msgstr ""
+
+# 7aaabef6af25402a93b260a66a9579b4
+#: ../../source/08-add-values-to-database-using-ejb.rst:47
+msgid "Add the following code to ``TestServlet``'s ``processRequest`` method:"
+msgstr ""
+
+# 949cfb676f944660ac25277830859d7f
+#: ../../source/08-add-values-to-database-using-ejb.rst:71
+msgid ""
+"This code fragment looks for the “add” parameter specified as part of the "
+"URL and then invokes the EJB's method to add a new customer to the database. "
+"The customer identifier is obtained as a value of the parameter and all "
+"other values are defaulted."
+msgstr ""
+
+# b2d3a88cd64142f3a44189887eb4ab3a
+#: ../../source/08-add-values-to-database-using-ejb.rst:75
+msgid ""
+"Once again, fix the imports by taking default values for ``DiscountCode`` "
+"and ``MicroMarket`` but make sure ``Address`` is imported from ``org."
+"glassfish.samples.Address``."
+msgstr ""
+
+# 055bc6ba021c48519ea39a80f5bc75c9
+#: ../../source/08-add-values-to-database-using-ejb.rst:78
+msgid ""
+"3. Access “http://localhost:8080/JavaEE6SampleApp/TestServlet?add=4” in the "
+"browser and this will add a new customer (with id “4” in this case) to the "
+"database and displays the page as shown."
+msgstr ""
+
+# c27651cf2b224922b0c3c376ba474ef6
+#: ../../source/08-add-values-to-database-using-ejb.rst:82
+msgid ""
+"Notice the newly added customer is now shown in the list. The output may "
+"differ based upon where the code was added in the ``processRequest`` method."
+msgstr ""
+
+# 005e5596a6804128b5aabcf6e3bc2c54
+#: ../../source/08-add-values-to-database-using-ejb.rst:86
+msgid ""
+"The customer identifier is specified as part of the URL so its important to "
+"pick a number that does not already exist in the database."
+msgstr ""
+
+# 159dc3649f164fd6a67eff9d33e0f72c
+#: ../../source/08-add-values-to-database-using-ejb.rst:89
+msgid ""
+"4. One of the bean validation constraints mentioned in ``Customer.java`` is "
+"for the phone number (identified by the field ``phone``) to be a maximum of "
+"12 characters. Lets update the constraint such that it requires at least 7 "
+"characters to be specified as well. This can be done by changing the "
+"existing constraint from:"
+msgstr ""
+
+# 2226475e6eb24b7e801f36a3623fcecc
+#: ../../source/08-add-values-to-database-using-ejb.rst:98
+msgid "to"
+msgstr ""
+
+# af3a86ecd75741f6be17aee4833eea11
+#: ../../source/08-add-values-to-database-using-ejb.rst:104
+msgid "Save the file and the project automatically gets re-deployed."
+msgstr ""
+
+# db4035134ca648d5966a7609c9a67c04
+#: ../../source/08-add-values-to-database-using-ejb.rst:106
+msgid ""
+"5. Access the URL  “http://localhost:8080/JavaEE6SampleApp/TestServlet?"
+"add=5” in a browser and this tries to add a new customer to the database and "
+"shows the output as shown."
+msgstr ""
+
+# 5c4cb0a572184a498401f02e982b24e4
+#: ../../source/08-add-values-to-database-using-ejb.rst:110
+msgid ""
+"The output shows the “Access count” incremented by 1 but the list of "
+"customers is not shown. Instead the GlassFish output log shows the following "
+"message:"
+msgstr ""
+
+# 7c6fb0f8068f4e9fba30c93ac807ac0a
+#: ../../source/08-add-values-to-database-using-ejb.rst:119
+msgid ""
+"This error message comes because the phone number is specified as a 4-digit "
+"number in the Servlet and so does not meet the validation criteria. This can "
+"be fixed by changing the phone number to specify 7 digits."
+msgstr ""
+
+# 685a18cdddba4881bf844c162da4f21d
+#: ../../source/08-add-values-to-database-using-ejb.rst:123
+msgid ""
+"6. Edit ``TestServlet.java``, change the phone number from “1234” to "
+"“1234567”, and save the file. And access the URL “http://localhost:8080/"
+"JavaEE6SampleApp/TestServlet?add=5” again to see the output as shown."
+msgstr ""
+
+# 02579c3923bb40c28ae372de9a755b21
+#: ../../source/08-add-values-to-database-using-ejb.rst:127
+msgid "The customer is now successfully added."
+msgstr ""

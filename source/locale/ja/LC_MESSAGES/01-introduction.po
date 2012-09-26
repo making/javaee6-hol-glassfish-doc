@@ -1,0 +1,90 @@
+# Japanese translations for Java EE 6 Hands-on Lab package.
+# Copyright (C) 2012, Arun Gupta
+# This file is distributed under the same license as the Java EE 6 Hands-on Lab package.
+# Toshiaki Maki <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Java EE 6 Hands-on Lab 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-26 20:42\n"
+"PO-Revision-Date: 2012-09-26 20:36+0900\n"
+"Last-Translator: Toshiaki Maki <>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# c410e4fd9ff74d69ac832ae96870f9ab
+#: ../../source/01-introduction.rst:2
+msgid "Introduction"
+msgstr "はじめに"
+
+# ee966626682244d0bbda9a7e61b8ac62
+#: ../../source/01-introduction.rst:4
+msgid ""
+"The Java EE 6 platform allows you to write enterprise and web applications "
+"using much lesser code from its earlier versions. It breaks the ?gone size "
+"fits all?h approach with Profiles and improves on the Java EE 5 developer "
+"productivity features tremendously. Several specifications like Enterprise "
+"JavaBeans 3.1, JavaServer Faces 2.0, Java API for RESTful Web Services 1.1, "
+"Java Persistence API 2.0, Servlet 3.0, Contexts and Dependency Injection "
+"1.0, and Bean Validation 1.0 make the platform more powerful by adding new "
+"functionality and yet keeping it simple to use. NetBeans, Eclipse, and "
+"IntelliJ provide extensive tooling for Java EE 6."
+msgstr ""
+
+# c277110c6094460d8ac2bf6df9b75f71
+#: ../../source/01-introduction.rst:6
+msgid ""
+"This hands-on lab will build a typical 3-tier end-to-end Web application "
+"using Java EE 6 technologies including JPA2, JSF2, EJB 3.1, JAX-RS 1.1, "
+"Servlet 3, CDI 1.0, and Bean Validation 1.0. The application is developed "
+"using NetBeans 7 and deployed on GlassFish 3.1.1."
+msgstr ""
+
+# 3a42d8875a3342219010a4f21fd8d1f5
+#: ../../source/01-introduction.rst:8
+msgid ""
+"The latest copy of this document is always available at https://blogs.oracle."
+"com/arungupta/resource/javaee6-hol-glassfish.pdf."
+msgstr ""
+
+# 07b025602b7040c190bcab3bedf9cc8f
+#: ../../source/01-introduction.rst:11
+msgid "Software Downloads"
+msgstr "ソフトウェアダウンロード"
+
+# 52a03bcca372404287e97240fae5c258
+#: ../../source/01-introduction.rst:13
+msgid "The following software need to be downloaded and installed:"
+msgstr "次のソフトウェアをダウンロードしてインストールする必要があります。"
+
+# 077791f27f7747b4b178a78001800a3e
+#: ../../source/01-introduction.rst:18
+msgid ""
+"JDK 6 or 7 from http://www.oracle.com/technetwork/java/javase/downloads/"
+"index.html."
+msgstr ""
+"JDK 6 または 7 http://www.oracle.com/technetwork/java/javase/downloads/"
+"index.html."
+
+# d193e1b2e4f04ba284d111333737e69e
+#: ../../source/01-introduction.rst:19
+msgid ""
+"NetBeans 7.0.1+ \"All\" or \"JavaEE\" version from http://netbeans.org/"
+"downloads/index.html. This version includes a pre-configured GlassFish 3.1.1."
+msgstr ""
+"NetBeans 7.0.1+ \"All\" または \"JavaEE\" version from http://netbeans.org/"
+"downloads/index.html. このバージョンは設定済みのGlassFish 3.1.1を含みます。"
+
+# bc1e13599455475ab12723b11f803eec
+#: ../../source/01-introduction.rst:21
+msgid ""
+"If you want to use Oracle WebLogic Server 12c for development and deployment "
+"of this  application then please follow the instructions at https://blogs."
+"oracle.com/arungupta/resource/javaee6-hol-weblogic.pdf."
+msgstr "このアプリケーションの開発やデプロイにOracle WebLogic Server 12cを使いたい場合は "
+"https://blogs.oracle.com/arungupta/resource/javaee6-hol-weblogic.pdf のインストラクションに従ってください。"

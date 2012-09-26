@@ -133,6 +133,7 @@ info:
 
 gettext:
 	$(SPHINXBUILD) -b gettext $(I18NSPHINXOPTS) $(BUILDDIR)/locale
+	cd source && sphinx-gettext-helper -p ../$(BUILDDIR)/locale --update --build --statistics
 	@echo
 	@echo "Build finished. The message catalogs are in $(BUILDDIR)/locale."
 

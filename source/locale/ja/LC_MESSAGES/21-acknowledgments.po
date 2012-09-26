@@ -1,0 +1,65 @@
+# Japanese translations for Java EE 6 Hands-on Lab package.
+# Copyright (C) 2012, Arun Gupta
+# This file is distributed under the same license as the Java EE 6 Hands-on Lab package.
+# Toshiaki Maki <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Java EE 6 Hands-on Lab 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-26 20:42\n"
+"PO-Revision-Date: 2012-09-26 20:38+0900\n"
+"Last-Translator: Toshiaki Maki <>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 9ac857909ceb4d1c8fa1ee823b376edc
+#: ../../source/21-acknowledgments.rst:2
+msgid "Acknowledgments"
+msgstr "謝辞"
+
+# ae06209a2b564df1b945d3bc4d833a87
+#: ../../source/21-acknowledgments.rst:4
+msgid ""
+"This hands-on lab was graciously reviewed by the following GlassFish "
+"community members:"
+msgstr ""
+
+# 1108d49223d14d12b75c02984fbba309
+#: ../../source/21-acknowledgments.rst:6
+msgid "Paulo Jeronimo"
+msgstr ""
+
+# e99fe4a632964af8bc87c5e3ef630e16
+#: ../../source/21-acknowledgments.rst:7
+msgid "Ajay Kemparaj"
+msgstr ""
+
+# b591402cb36e41b290c1a9c17ceb33aa
+#: ../../source/21-acknowledgments.rst:8
+msgid "Markus Eisele"
+msgstr ""
+
+# d7c590e3d54c4cf0a0757b03c9f1f721
+#: ../../source/21-acknowledgments.rst:9
+msgid "Santhosh Gandhe"
+msgstr ""
+
+# b83ff98c167548c59f43ad2db2cb2ca8
+#: ../../source/21-acknowledgments.rst:10
+msgid "Filipe Portes"
+msgstr ""
+
+# b68edff2949e4d2480ecde7b734790df
+#: ../../source/21-acknowledgments.rst:11
+msgid "Victor M. Ramirez"
+msgstr ""
+
+# 5edc357dc0fd418b9764a0bfdf9eb65d
+#: ../../source/21-acknowledgments.rst:13
+msgid "Thank you very much for taking time to provide the valuable feedback!"
+msgstr ""

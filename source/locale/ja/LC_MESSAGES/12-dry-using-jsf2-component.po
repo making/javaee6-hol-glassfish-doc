@@ -1,0 +1,126 @@
+# Japanese translations for Java EE 6 Hands-on Lab package.
+# Copyright (C) 2012, Arun Gupta
+# This file is distributed under the same license as the Java EE 6 Hands-on Lab package.
+# Toshiaki Maki <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Java EE 6 Hands-on Lab 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-26 20:42\n"
+"PO-Revision-Date: 2012-09-26 20:37+0900\n"
+"Last-Translator: Toshiaki Maki <>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 3ac58b22d91f4b43a53ae777e540bde6
+#: ../../source/12-dry-using-jsf2-component.rst:2
+msgid "DRY using JSF2 Composite Component"
+msgstr "JSF2の複合コンポーネントを使用してDRYを実現"
+
+# 5eb395b683da4905b596ba84eab92550
+#: ../../source/12-dry-using-jsf2-component.rst:4
+msgid ""
+"The JSF2 specification defines a composite component as a component that "
+"consists of one or more JSF components defined in a Facelet markup file that "
+"resides inside a resource library. The composite component is defined in the "
+"defining page and used in the using page. The defining page defines the "
+"metadata (or parameters) using ``<cc:interface>`` and implementation using "
+"``<cc:implementation>`` where cc is the prefix for the http://java.sun.com/"
+"jsf/composite namespace."
+msgstr ""
+
+# 016661f2c04d4ea08322222ed7479cb8
+#: ../../source/12-dry-using-jsf2-component.rst:7
+msgid ""
+"This section will convert a Facelets markup fragment from ``index.xhtml`` "
+"into a composite component."
+msgstr ""
+
+# 8d2c46ae465c4f8c9cad4ad3218264cf
+#: ../../source/12-dry-using-jsf2-component.rst:10
+msgid "In ``index.xhtml``, select the ``<h:dataTable>`` fragment as shown."
+msgstr ""
+
+# b87dabc3c59a484c8341a6ffc0cacd11
+#: ../../source/12-dry-using-jsf2-component.rst:16
+msgid "Click on the yellow bulb and select the hint."
+msgstr ""
+
+# 2031a516b7ad4690b37aa32a140819df
+#: ../../source/12-dry-using-jsf2-component.rst:18
+msgid "Take the defaults as shown."
+msgstr ""
+
+# 397cc05efe1d4fe6aecd2a2709cd1889
+#: ../../source/12-dry-using-jsf2-component.rst:22
+msgid "and click on “Finish”."
+msgstr ""
+
+# 6637f096c753480bb50cb2b6e319bc7f
+#: ../../source/12-dry-using-jsf2-component.rst:24
+msgid "The updated ``index.xhtml``, the using page, looks like:"
+msgstr ""
+
+# 0dc493833d5b499da33bf9ef1ee782b2
+#: ../../source/12-dry-using-jsf2-component.rst:46
+msgid ""
+"It has a new namespace http://java.sun.com/jsf/composite/ezcomp with a "
+"prefix ez. This namespace is the standard namespace defined by the JSF2 "
+"specification suffixed with ``ezcomp``. This ``ezcomp`` is a new directory "
+"created in the standard resources directory defined by the JSF2 "
+"specification. The tag name for the new composite component is the same as "
+"the defining page file name. The updated directory structure looks like as "
+"shown."
+msgstr ""
+
+# 31364bcf797d487fbb99e846c3af724b
+#: ../../source/12-dry-using-jsf2-component.rst:48
+msgid ""
+"The entire fragment inside ``<h:dataTable>`` is replaced with ``<ez:out>``. "
+"This allows a collection of JSF components to be extracted into a composite "
+"component following the Dont-Repeat-Yourself (DRY) design pattern and "
+"enables to use ``<ez:out>`` for printing the list of customers instead of "
+"repeating that entire code fragment. It also allows developers to author new "
+"components without any Java code or XML configuration."
+msgstr ""
+
+# 2977fd049e134eba99618b035613d33d
+#: ../../source/12-dry-using-jsf2-component.rst:50
+msgid "The defining page ``out.xhtml`` looks like:"
+msgstr ""
+
+# 7cc88e9bb24c423d84936f3f682042c0
+#: ../../source/12-dry-using-jsf2-component.rst:78
+msgid ""
+"The ``<cc:interface>`` defines metadata that describe the characteristics of "
+"this component, such as supported attributes, facets, and even attach points "
+"for event listeners. ``<cc:implementation>`` contains the markup substituted "
+"for the composite component, ``<h:dataTable>`` fragment from index.xhtml in "
+"this case."
+msgstr ""
+
+# 91492f87d36443d9a37e5b150151477d
+#: ../../source/12-dry-using-jsf2-component.rst:80
+msgid ""
+"The ``<cc:interface>`` is generated in the page but is empty and may be made "
+"option in a subsequent release of the JSF specification."
+msgstr ""
+
+# 566fe03b2385473badf04b78bea2a367
+#: ../../source/12-dry-using-jsf2-component.rst:82
+msgid ""
+"Refreshing “http://localhost:8080/JavaEE6SampleApp/faces/index.xhtml” shows "
+"the same result as before."
+msgstr ""
+
+# 7fcf7024fa834e81acd1381f41a44d0e
+#: ../../source/12-dry-using-jsf2-component.rst:84
+msgid ""
+"Note: In some unknown cases you may have to deploy the project explicitly "
+"otherwise h namespace prefix in ``out.xhtml`` is not resolved correctly."
+msgstr ""

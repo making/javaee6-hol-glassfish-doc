@@ -1,0 +1,287 @@
+# Japanese translations for Java EE 6 Hands-on Lab package.
+# Copyright (C) 2012, Arun Gupta
+# This file is distributed under the same license as the Java EE 6 Hands-on Lab package.
+# Toshiaki Maki <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Java EE 6 Hands-on Lab 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-26 20:42\n"
+"PO-Revision-Date: 2012-09-26 20:36+0900\n"
+"Last-Translator: Toshiaki Maki <>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# a8a5941a14ec4a3d93f903162333b84d
+#: ../../source/04-generate-jpa-entities.rst:2
+msgid "Generate JPA Entities from the Database Table"
+msgstr "データーベーステーブルからJPAエンティティを生成"
+
+# e0bc545d28c64cf98018110c998e5278
+#: ../../source/04-generate-jpa-entities.rst:4
+msgid ""
+"Java Persistence API (JPA) is a standard API that defines mapping between "
+"database tables and Java classes. These POJOs can then be used to perform "
+"all the database operations using Java Persistence Query Language (JPQL) "
+"which is a string-based SQL-like syntax or a type-safe Criteria API. Both "
+"JPQL and Criteria API operate on the Java model instead of the database "
+"tables."
+msgstr ""
+
+# 80bdf8af9e4b47cf93af3813900e062a
+#: ../../source/04-generate-jpa-entities.rst:7
+msgid ""
+"This section will generate JPA entities from a sample database and customize "
+"them to be more intuitive for Java developers."
+msgstr ""
+
+# f0fb5ecd77064ad1b8522c8604657dc6
+#: ../../source/04-generate-jpa-entities.rst:10
+msgid ""
+"In NetBeans, right-click on  the project and select \"New\", \"Other...\", "
+"\"Persistence\", \"Entity Classes from Database...\". Choose \"jdbc/sample\" "
+"as the Data Source from the drop down list box as shown. This will show all "
+"the tables from this data source."
+msgstr ""
+
+# 59f36499435749b494a45fea6f6fd0a7
+#: ../../source/04-generate-jpa-entities.rst:14
+msgid ""
+"Select \"CUSTOMER\" table from the \"Available Tables\" and click \"Add>\". "
+"Notice that the \"DISCOUNT_CODE\" and \"MICRO_MARKET\" tables are "
+"automatically selected because of the foreign key references and the "
+"selected \"Include Related Tables\" checkbox."
+msgstr ""
+
+# a50658b45b07455ea9fc99177596cd68
+#: ../../source/04-generate-jpa-entities.rst:16
+msgid "Click on \"Next>\"."
+msgstr ""
+
+# 4468a0b5785245de8861a53c7de0145e
+#: ../../source/04-generate-jpa-entities.rst:18
+msgid "Enter the package name ``org.glassfish.samples.entities`` as shown."
+msgstr ""
+
+# 503a77c41cf944dfbd5043c23b0e86a8
+#: ../../source/04-generate-jpa-entities.rst:22
+msgid ""
+"The database table name and the corresponding mapped class name is shown in "
+"the \"Class Name\" column and can be changed here, if needed."
+msgstr ""
+
+# 26bc5860be484001a37d29a0f05c6b93
+#: ../../source/04-generate-jpa-entities.rst:26
+msgid ""
+"The first check box allows NetBeans to generate multiple ``@NamedQuery`` "
+"annotations on the JPA  entity. These annotations provide pre-defined JPQL "
+"queries that can be used to query the database."
+msgstr ""
+
+# bf14edce905c4de7bcc43ff51db7679d
+#: ../../source/04-generate-jpa-entities.rst:27
+msgid ""
+"The second check box ensures that the ``@XmlRootElement`` annotation is "
+"generated on the JPA entity class so that it can be converted to an XML or "
+"JSON representation easily by JAXB. This feature is useful when the entities "
+"are published as a RESTful resource."
+msgstr ""
+
+# 94ff1e16c61c4f2d96328b51bb519e4e
+#: ../../source/04-generate-jpa-entities.rst:28
+msgid ""
+"The third check box generates the required Persistence Unit required by JPA."
+msgstr ""
+
+# c8671c5c61384ad2bbe99ab71bcf9b3f
+#: ../../source/04-generate-jpa-entities.rst:30
+msgid "Click on \"Finish\" to complete the entity generation."
+msgstr ""
+
+# 30d9faacef56484f861036ca446c87e5
+#: ../../source/04-generate-jpa-entities.rst:32
+msgid ""
+"In NetBeans, expand \"Source Packages\", ``org.glassfish.samples.entities``, "
+"and double-click ``Customer.java``."
+msgstr ""
+
+# afc7848afe2d4c44a4ed89b3a7e0d832
+#: ../../source/04-generate-jpa-entities.rst:35
+msgid "Notice the following points in the generated code:"
+msgstr ""
+
+# e03cbc3d1e7a465ba9b897fa6a40dbd8
+#: ../../source/04-generate-jpa-entities.rst:37
+msgid ""
+"The generated class-level ``@NamedQuery`` annotations uses JPQL to define "
+"several queries. One of the queries is named \"Customer.findAll\" which maps "
+"to the JPQL that retrieves all rows from the database. There are several "
+"\"findBy\" queries, one for each field (which maps to a column in the "
+"table), that allows to query the data for that specific field. Additional "
+"queries may be added here providing a central location for all your query-"
+"related logic."
+msgstr ""
+
+# df59fc8a65564f3a9de57b470bb93bac
+#: ../../source/04-generate-jpa-entities.rst:38
+msgid ""
+"The bean validation constraints are generated on each field based upon the "
+"schema definition. These constraints are then used by the validator included "
+"in the JPA implementation before an entity is saved, updated, or removed "
+"from the database."
+msgstr ""
+
+# a864aa4a07d9440b995d7a10ccb2e6af
+#: ../../source/04-generate-jpa-entities.rst:39
+msgid ""
+"The regular expression-based constraint may be used to enforce phone or "
+"zipcode in a particular format."
+msgstr ""
+
+# a47b36d714e94fd8b8e8b4139230c33f
+#: ../../source/04-generate-jpa-entities.rst:40
+msgid ""
+"The ``zip`` and ``discountCode`` fields are marked with the ``@JoinColumn`` "
+"annotation  creating a join with the appropriate table."
+msgstr ""
+
+# 9a14c28b9578401e89e156493819cabb
+#: ../../source/04-generate-jpa-entities.rst:43
+msgid "Walk-through the JPA Entities and Refactor to Simplify"
+msgstr "JPAエンティティを確認し、シンプルにリファクタリング"
+
+# 2d16fdd13620435dbcd100bb38e7821a
+#: ../../source/04-generate-jpa-entities.rst:46
+msgid ""
+"This section will customize the generated JPA entities to make them more "
+"intuitive for a Java developer."
+msgstr ""
+
+# 7f6d87597bbb4896b7ad45578aa46f81
+#: ../../source/04-generate-jpa-entities.rst:48
+msgid ""
+"Edit ``Customer.java`` and change the class structure to introduce an "
+"embeddable class for ``street``, ``city``, ``country``, and ``zip`` fields "
+"as these are logically related entities."
+msgstr ""
+
+# 9edb6bf96a394f73a22bbbc2a02bff41
+#: ../../source/04-generate-jpa-entities.rst:50
+msgid "Replace the following code:"
+msgstr ""
+
+# 79dae783fa29409e9d70452a89d68734
+#: ../../source/04-generate-jpa-entities.rst:67
+msgid "and"
+msgstr ""
+
+# 83913622c23b46ebbcb0f234e2cd16b3
+#: ../../source/04-generate-jpa-entities.rst:75
+msgid "with"
+msgstr ""
+
+# e5e8290e20c2495fb1fba144cb5a8331
+#: ../../source/04-generate-jpa-entities.rst:81
+msgid ""
+"Click on the yellow bulb in the left bar to create a new class in the "
+"current package as shown:"
+msgstr ""
+
+# 69490fe020ba4edab25f131dd41ff209
+#: ../../source/04-generate-jpa-entities.rst:86
+msgid "Notice the following points:"
+msgstr ""
+
+# 567b8ab8b4514ed3a926d5f68558fbbd
+#: ../../source/04-generate-jpa-entities.rst:88
+msgid "The two blocks of code above are not adjacent."
+msgstr ""
+
+# d7d8ddc063d2441580d64f26f0f205c8
+#: ../../source/04-generate-jpa-entities.rst:89
+msgid ""
+"Copy/pasting only the fields will show a red line under some of the methods "
+"in your entity but will be fixed later."
+msgstr ""
+
+# a95304223b2444b68c6b3f5b40c0764a
+#: ../../source/04-generate-jpa-entities.rst:90
+msgid ""
+"The ``@Embedded`` annotation ensures that this field's value is an instance "
+"of an embeddable class."
+msgstr ""
+
+# e982b02ea5d2452d8ea51caddcf9ede3
+#: ../../source/04-generate-jpa-entities.rst:93
+msgid ""
+"Change ``Address.java`` so that it is a public class, annotate with "
+"``@Embeddable`` such that it can be used as embeddable class, and also "
+"implement the ``Serializable`` interface. The updated class definition is "
+"shown:"
+msgstr ""
+
+# 1a9ce6f68da14467b64e2fe20eda578f
+#: ../../source/04-generate-jpa-entities.rst:100
+msgid ""
+"In ``Address.java``, paste the different fields code replaced from "
+"``Customer.java`` and add getter/setters for each field. The methods can be "
+"easily generated by going to the \"Source\", \"Insert Code...\", selecting "
+"\"Getter and Setter...\", selecting all the fields, and then clicking on "
+"\"Generate\"."
+msgstr ""
+
+# 399793014ec549ffb5e710a51d681dc0
+#: ../../source/04-generate-jpa-entities.rst:102
+msgid ""
+"Fix all the imports by right-clicking in the editor, selecting \"Fix "
+"Imports...\", and taking all the defaults."
+msgstr ""
+
+# e30a214db79c4ee68bdf03984022b125
+#: ../../source/04-generate-jpa-entities.rst:104
+msgid "Make the following changes in ``Customer.java``:"
+msgstr ""
+
+# 31f6d75b60ff40419ea791c6290be5e9
+#: ../../source/04-generate-jpa-entities.rst:106
+msgid "Remove the getter/setter for the previously removed fields."
+msgstr ""
+
+# 3c59905d7eea448da72cefad5015adc5
+#: ../../source/04-generate-jpa-entities.rst:107
+msgid "Add a new getter/setter for \"address\" field as:"
+msgstr ""
+
+# ffcd644ac53949c1969429b08323ddcd
+#: ../../source/04-generate-jpa-entities.rst:114
+msgid ""
+"Change the different ``@NamedQuery`` to reflect the nested structure for "
+"Address by editing the queries identified by ``Customer."
+"findByAddressline1``, ``Customer.findByAddressline2``, ``Customer."
+"findByCity``, and ``Customer.findByState`` such that ``c.addressline1``, ``c."
+"addressline2``, ``c.city``, and ``c.state`` is replaced with ``c.address."
+"addressline1``, ``c.address.addressline2``, ``c.address.city``, and ``c."
+"address.state`` respectively."
+msgstr ""
+
+# a78c37ccf6754070923dd7a7f7afa345
+#: ../../source/04-generate-jpa-entities.rst:116
+msgid "Here is one of the updated query:"
+msgstr ""
+
+# e7d56d97cf9a4948be22ecc22b189efd
+#: ../../source/04-generate-jpa-entities.rst:122
+msgid "Change the implementation of the toString method as shown below:"
+msgstr ""
+
+# 32cb7b020fa9445ca352d5160209e84c
+#: ../../source/04-generate-jpa-entities.rst:131
+msgid ""
+"This will ensure that the customer's name and unique identifier are printed "
+"as the default string representation."
+msgstr ""

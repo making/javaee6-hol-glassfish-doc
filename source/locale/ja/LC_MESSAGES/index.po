@@ -1,0 +1,48 @@
+# Japanese translations for Java EE 6 Hands-on Lab package.
+# Copyright (C) 2012, Arun Gupta
+# This file is distributed under the same license as the Java EE 6 Hands-on Lab package.
+# Toshiaki Maki <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Java EE 6 Hands-on Lab 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-26 20:42\n"
+"PO-Revision-Date: 2012-09-26 20:38+0900\n"
+"Last-Translator: Toshiaki Maki <>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# e6e6c8ed2dc74d01be656ea7d67d795f
+#: ../../source/index.rst:7
+msgid "Welcome to Java EE 6 Hands-on Lab's documentation!"
+msgstr "Java EE 6 ハンズオンラボドキュメント"
+
+# c45619db17224c9aae8e354f6dda46d1
+#: ../../source/index.rst:9
+msgid "Contents:"
+msgstr "内容:"
+
+# da8358e15929460fbf639271b0f7019b
+#: ../../source/index.rst:39
+msgid "Indices and tables"
+msgstr "索引"
+
+# e1de78b95230410e8f34ed815fb6a77f
+#: ../../source/index.rst:41
+msgid ":ref:`genindex`"
+msgstr ":ref:`genindex`"
+
+# 074f7e1749a149b09b5c14dd724d8d16
+#: ../../source/index.rst:42
+msgid ":ref:`modindex`"
+msgstr ":ref:`modindex`"
+
+# b7dd47b784fd4f28b9ea2163f9b0f380
+#: ../../source/index.rst:43
+msgid ":ref:`search`"
+msgstr ":ref:`search`"

@@ -1,0 +1,137 @@
+# Japanese translations for Java EE 6 Hands-on Lab package.
+# Copyright (C) 2012, Arun Gupta
+# This file is distributed under the same license as the Java EE 6 Hands-on Lab package.
+# Toshiaki Maki <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Java EE 6 Hands-on Lab 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-26 20:42\n"
+"PO-Revision-Date: 2012-09-26 20:37+0900\n"
+"Last-Translator: Toshiaki Maki <>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 38de73eda2ea4be4b4e4fa81075e29d5
+#: ../../source/09-type-safe-criteria-query.rst:2
+msgid "Type-safe Critieria Query using JPA2 Metamodel"
+msgstr "JPA2のメタモデルを使用しタイプセーフなクライテリアクエリの実行"
+
+# 1850834db6ca4baeb29ea6f5bedfbc09
+#: ../../source/09-type-safe-criteria-query.rst:4
+msgid ""
+"The JPA2 specification defines Metamodel classes to capture the meta-model "
+"of the persistent state and relationships of the managed classes of a "
+"persistence unit. The canonical metamodel classes can be generated "
+"statically using an annotation processor following the rules defined by the "
+"specification."
+msgstr ""
+
+# 22a094a8043f4104b7bce9c77763cbf7
+#: ../../source/09-type-safe-criteria-query.rst:9
+msgid ""
+"This abstract persistence schema is used to author the type-safe queries "
+"using Critieria API, rather than use of the string-based approach of the "
+"Java Persistence Query Language (JPQL)."
+msgstr ""
+
+# 663e0fc3c89f4303a6d1b28445bf5550
+#: ../../source/09-type-safe-criteria-query.rst:14
+msgid "This section creates type-safe query using JPA2 Criteria API."
+msgstr ""
+
+# 1ef28c123ba7462aa4587f790e1a6a77
+#: ../../source/09-type-safe-criteria-query.rst:16
+msgid ""
+"Right-click on the project and select “Clean and Build” to generate "
+"metamodel classes for the JPA entities. The project explorer looks like as "
+"shown."
+msgstr ""
+
+# 26061e93f9fe4522817f6091a7014555
+#: ../../source/09-type-safe-criteria-query.rst:18
+msgid ""
+"The JPA2 specification defines a canonical metamodel. NetBeans uses "
+"“EclipseLink Canonical Metamodel Generator” to generate these metamodel "
+"classes when the project is built. This is pre-configured in “Project "
+"Properties”, “Libraries”, “Processor” as shown."
+msgstr ""
+
+# 34f0c71b0bda4e3795e053a606ad9085
+#: ../../source/09-type-safe-criteria-query.rst:22
+msgid "Here is how the generated ``Address_.java`` class looks like:"
+msgstr ""
+
+# fc1672f43b844c01b2bff55ad51cae82
+#: ../../source/09-type-safe-criteria-query.rst:41
+msgid ""
+"This class provides the type and cardinality of each field in the Address "
+"entity."
+msgstr ""
+
+# 605ab5f388894c1ca53de40f7f4e19f6
+#: ../../source/09-type-safe-criteria-query.rst:43
+msgid "Add the following code to ``CustomerSessionBean.java``:"
+msgstr ""
+
+# fbda2fc1d0964fc98c3e2d8d67b65d9b
+#: ../../source/09-type-safe-criteria-query.rst:61
+msgid ""
+"This method returns the list of all customers from the database, just like "
+"``getCustomers`` method earlier, but uses type-safe Criteria API to query "
+"the database."
+msgstr ""
+
+# dc34060edc7b45a7a360f585936eaf13
+#: ../../source/09-type-safe-criteria-query.rst:64
+msgid "The generated metamodel will be used later."
+msgstr ""
+
+# 5d3ecaa8737d4b1ba5f9270d2232c814
+#: ../../source/09-type-safe-criteria-query.rst:67
+msgid ""
+"Note that all the information is specified without any string-based "
+"identifiers."
+msgstr ""
+
+# 3b76bf040c81480aa6e5ad7c05beb2ac
+#: ../../source/09-type-safe-criteria-query.rst:69
+msgid "Fix the imports by taking all the defaults."
+msgstr ""
+
+# 3d0d42bc0bf84ddea66e907e841573ad
+#: ../../source/09-type-safe-criteria-query.rst:71
+msgid "In “TestServlet.java”, replace the code:"
+msgstr ""
+
+# 374423d41c5a4df5a603334a5dd3d08f
+#: ../../source/09-type-safe-criteria-query.rst:77
+msgid "with"
+msgstr ""
+
+# 3d5970dfeab44d2985a0fdbf1eb9d991
+#: ../../source/09-type-safe-criteria-query.rst:83
+msgid "Notice the new EJB function is now invoked."
+msgstr ""
+
+# dd86e0be8fd0415eb31be27301776041
+#: ../../source/09-type-safe-criteria-query.rst:85
+msgid "Fix the imports."
+msgstr ""
+
+# d4cdc23c7add418aad59e460e66d943e
+#: ../../source/09-type-safe-criteria-query.rst:87
+msgid ""
+"Refresh the page “http://localhost:8080/JavaEE6SampleApp/TestServlet” in "
+"browser to see an output like:"
+msgstr ""
+
+# bdc9af7bbabe47059629f3d429ab8c77
+#: ../../source/09-type-safe-criteria-query.rst:89
+msgid "This confirms that there is no change in the output, as expected."
+msgstr ""

@@ -1,0 +1,284 @@
+# Japanese translations for Java EE 6 Hands-on Lab package.
+# Copyright (C) 2012, Arun Gupta
+# This file is distributed under the same license as the Java EE 6 Hands-on Lab package.
+# Toshiaki Maki <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Java EE 6 Hands-on Lab 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-26 20:42\n"
+"PO-Revision-Date: 2012-09-26 20:37+0900\n"
+"Last-Translator: Toshiaki Maki <>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 34126c937d6448fdb43205619d53db22
+#: ../../source/16-inject-beans-using-cdi-qualifiers.rst:2
+msgid "Inject Beans using CDI Qualifiers"
+msgstr "CDI修飾子を利用してBeanをインジェクト"
+
+# 2fe2d062d2664e64a641d20e0a16a974
+#: ../../source/16-inject-beans-using-cdi-qualifiers.rst:4
+msgid ""
+"The Contexts and Dependency Injection is a new specification in the Java EE "
+"6 platform. The CDI specification provides a type-safe approach to "
+"dependency injection. The specification promotes “strong typing” and “loose "
+"coupling”. A bean only specifies the type and semantics of other beans it "
+"depends upon, only using the Java type system with no String-based "
+"identifiers. The bean requesting injection may not be aware of the "
+"lifecycle, concrete implementation, threading model, or other clients "
+"requesting injection. The CDI runtime finds the right bean in the right "
+"scope and context and then injects it in the requestor. This loose coupling "
+"makes code easier to maintain."
+msgstr ""
+
+# f3707a33fb4d434089dd4a99187b1e81
+#: ../../source/16-inject-beans-using-cdi-qualifiers.rst:6
+msgid ""
+"The CDI specification defines “Qualifiers” as a means to uniquely identify "
+"one of the multiple implementations of a bean to be injected. The "
+"specification defines certain pre-defined qualifiers (``@Default``, "
+"``@Any``, ``@Named``, ``@New``) and allows new qualifiers to be defined "
+"easily."
+msgstr ""
+
+# 0b2c8be7d264480e845cf944dfa900ee
+#: ../../source/16-inject-beans-using-cdi-qualifiers.rst:10
+msgid ""
+"This section shows how one or many implementations of a bean can be injected "
+"using CDI Qualifiers."
+msgstr ""
+
+# 46094a5151274bf2ad1e762442b98a9c
+#: ../../source/16-inject-beans-using-cdi-qualifiers.rst:13
+msgid ""
+"Right-click on the project, select “New”, “Other...”, “Java”, “Java "
+"Interface...”, give the name as “Greeter” and choose the package name as "
+"“org.glassfish.samples”. Click on “Finish”."
+msgstr ""
+
+# 765552d8022042cd9a06f89b8a487c23
+#: ../../source/16-inject-beans-using-cdi-qualifiers.rst:16
+msgid "Add the following method to this interface:"
+msgstr ""
+
+# c13c45a33e9f48ad9108372b79b0b07e
+#: ../../source/16-inject-beans-using-cdi-qualifiers.rst:22
+msgid "This interface will be used to greet the customer."
+msgstr ""
+
+# 81338c5720af426883d2feec6e03dd94
+# 4d7706bc80fe421c94cfccd0eff9e05d
+#: ../../source/16-inject-beans-using-cdi-qualifiers.rst:24
+#: ../../source/16-inject-beans-using-cdi-qualifiers.rst:49
+msgid "Resolve the imports."
+msgstr ""
+
+# ecfe86d1b8ed406f82df82743dae98e0
+#: ../../source/16-inject-beans-using-cdi-qualifiers.rst:26
+msgid ""
+"Add an implementation of the customer by adding a new class with the name "
+"“NormalGreeter”. Change the generated class to look like:"
+msgstr ""
+
+# 5a65bbbe90fe47d4bafc7e2df007972d
+#: ../../source/16-inject-beans-using-cdi-qualifiers.rst:36
+msgid "}"
+msgstr ""
+
+# 3fe9a895fa374f94af6085337fef61cc
+#: ../../source/16-inject-beans-using-cdi-qualifiers.rst:38
+msgid ""
+"This class implements the Greeter interface and provide a concrete "
+"implementation of the method."
+msgstr ""
+
+# 526ac19e7df94b91a387cc2da43b7763
+#: ../../source/16-inject-beans-using-cdi-qualifiers.rst:41
+msgid "In TestServlet.java, inject a Greeter as:"
+msgstr ""
+
+# 67eab0a2a0f04423b66d11c0d54f83e9
+#: ../../source/16-inject-beans-using-cdi-qualifiers.rst:47
+msgid "Note, this is injecting the interface, not the implementation."
+msgstr ""
+
+# 6fd95016a0034835b8b0d7e1061ac8a5
+#: ../../source/16-inject-beans-using-cdi-qualifiers.rst:51
+msgid "Add the following code in the ``processRequest`` method:"
+msgstr ""
+
+# 16fb6f0bbf1c4a07bf6e5b48d9cd0406
+#: ../../source/16-inject-beans-using-cdi-qualifiers.rst:61
+msgid ""
+"For convenience, this code was added right before the list of customers is "
+"printed."
+msgstr ""
+
+# 3f156040b58f4e49850ffda67bd2589a
+#: ../../source/16-inject-beans-using-cdi-qualifiers.rst:63
+msgid ""
+"This code reads a parameter “greet” from the URL, uses its value to extract "
+"the customer from the database, and invokes the injected ``Greeter`` "
+"interface on it. Behind the scene, the CDI runtime looks for an "
+"implementation of this interface, finds NormalGreeter, and injects it."
+msgstr ""
+
+# 0f7cd4f2895c47689f27a0e097f65947
+#: ../../source/16-inject-beans-using-cdi-qualifiers.rst:65
+msgid ""
+"The default scope of the bean is @Dependent and is injected directly. For "
+"non-default scopes, a proxy to the bean is injected. The actual bean "
+"instance is injected at the runtime after the scope and context is "
+"determined correctly."
+msgstr ""
+
+# ba0c6ffd8df64c1f9b3db174347e6697
+#: ../../source/16-inject-beans-using-cdi-qualifiers.rst:68
+msgid ""
+"Access the page “http://localhost:8080/JavaEE6SampleApp/TestServlet?greet=0” "
+"in a browser to see the output as shown. Note, the value of the parameter is "
+"not the customer identifier, its the order of customer in the list returned "
+"by the database."
+msgstr ""
+
+# 78a2a8307217454aa83760ba20b89fa3
+#: ../../source/16-inject-beans-using-cdi-qualifiers.rst:70
+msgid ""
+"The output from the recently added statement is highlighted with a red "
+"circle."
+msgstr ""
+
+# 4f6e35aee3744dc59184aa678b9fc176
+#: ../../source/16-inject-beans-using-cdi-qualifiers.rst:72
+msgid ""
+"Lets add an alternative implementation of Greeter that greets customers "
+"based upon their credit limit."
+msgstr ""
+
+# 58d439e6ba864f74b48bd623599a61ee
+#: ../../source/16-inject-beans-using-cdi-qualifiers.rst:75
+msgid ""
+"Right-click on the project, select “New”, “Java Class...”, give the name as "
+"“PromotionalGreeter”. Change the implementation to:"
+msgstr ""
+
+# da4aa461a5484c20880c92340269855e
+#: ../../source/16-inject-beans-using-cdi-qualifiers.rst:98
+msgid ""
+"This method returns a different greeting method based upon the credit limit. "
+"Notice, this class is extending ``NormalGreeter`` class and so now the "
+"Greeter interface has two implementations in the application."
+msgstr ""
+
+# 53a6489ea24c4c3cbb73773e51b7cb0e
+#: ../../source/16-inject-beans-using-cdi-qualifiers.rst:100
+msgid ""
+"Resolve the imports. As soon as you save this file, the NetBeans IDE tries "
+"to deploy the project but fails with the following error:"
+msgstr ""
+
+# cf30d0322c6a4d22acf30453a0e9ec76
+#: ../../source/16-inject-beans-using-cdi-qualifiers.rst:102
+msgid ""
+"Error occurred during deployment: Exception while loading the app : "
+"WELD-001409 Ambiguous dependencies for type [Greeter] with qualifiers "
+"[@Default] at injection point [[field] @Inject org.glassfish.samples."
+"TestServlet.greeter]. Possible dependencies [[Managed Bean [class org."
+"glassfish.samples.PromotionalGreeter] with qualifiers [@Any @Default], "
+"Managed Bean [class org.glassfish.samples.NormalGreeter] with qualifiers "
+"[@Any @Default]]]."
+msgstr ""
+
+# 13e1f0700c1d45d08cea5bdfa4b9c405
+#: ../../source/16-inject-beans-using-cdi-qualifiers.rst:104
+msgid ""
+"The error message clearly explains that the Greeter interface has two "
+"implementations, both with the default set of qualifiers. The CDI runtime "
+"finds both the implementations equally capable for injection and gives an "
+"error message explaining the “ambiguous dependencies”."
+msgstr ""
+
+# 4ee4152c2bb348dcb446059af622c53a
+#: ../../source/16-inject-beans-using-cdi-qualifiers.rst:106
+msgid "Lets resolve this by adding a qualifier on one of the implementations."
+msgstr ""
+
+# 73cc50fd67794308a1b23ce241113274
+#: ../../source/16-inject-beans-using-cdi-qualifiers.rst:109
+msgid ""
+"Add ``@Promotion`` as a class-level annotation on ``PromotionalGreeter."
+"java``. Click on the yellow bulb and take the suggestion to create the "
+"Qualifier."
+msgstr ""
+
+# 981abde480cc478e81bac1229c269e55
+#: ../../source/16-inject-beans-using-cdi-qualifiers.rst:111
+msgid ""
+"This generates the boilerplate code required for the ``@Promotion`` "
+"qualifier as:"
+msgstr ""
+
+# f44729144c5b41dab8516af86874b674
+#: ../../source/16-inject-beans-using-cdi-qualifiers.rst:121
+msgid ""
+"As you can see, the CDI qualifier is a Java annotation, that itself is "
+"annotated with the ``@javax.inject.Qualifier`` meta-annotation."
+msgstr ""
+
+# 7ecb32d06ce7400da27ab62aa6a5416e
+#: ../../source/16-inject-beans-using-cdi-qualifiers.rst:123
+msgid ""
+"The project gets successfully deployed after this file is saved. This "
+"happens correctly now because one of the implementations of the Greeter "
+"interface (``PromotionalGreeter``) is more qualified than the other "
+"(``NormalGreeter``) and so the default implementation (``NormalGreeter``) "
+"can be injected without any ambiguities."
+msgstr ""
+
+# d14bbcf71fdc4eab9c3496ef089bd437
+#: ../../source/16-inject-beans-using-cdi-qualifiers.rst:125
+msgid ""
+"Refreshing the page “http://localhost:8080/JavaEE6SampleApp/TestServlet?"
+"greet=1” shows the same the output as earlier."
+msgstr ""
+
+# 5b28273860e949babcbbd0659eacb767
+#: ../../source/16-inject-beans-using-cdi-qualifiers.rst:128
+msgid "Change the injection of Greeter to:"
+msgstr ""
+
+# e3682f07b4e048d0b81ab58f4c8d4d68
+#: ../../source/16-inject-beans-using-cdi-qualifiers.rst:134
+msgid ""
+"Save the file, refreshing the page “http://localhost:8080/JavaEE6SampleApp/"
+"TestServlet?greet=0” displays the output as shown."
+msgstr ""
+
+# 13aca0892c464781bde9cb92993cf260
+#: ../../source/16-inject-beans-using-cdi-qualifiers.rst:136
+msgid ""
+"The updated greeting message shows that the PromotionalGreeter is injected "
+"instead of the default one (``NormalGreeter``). The updated greeting is "
+"highlighted with a red circle."
+msgstr ""
+
+# 9791adb15fa94ba0bdd6903b46dd5caf
+#: ../../source/16-inject-beans-using-cdi-qualifiers.rst:138
+msgid ""
+"Accessing “http://localhost:8080/JavaEE6SampleApp/TestServlet?greet=6” shows "
+"a different greeting message, based upon the credit limit of the customer, "
+"as shown."
+msgstr ""
+
+# 46a8a0b52d7b44d0a7684a961e0c1e80
+#: ../../source/16-inject-beans-using-cdi-qualifiers.rst:140
+msgid ""
+"The CDI qualifiers ensures that there is no direct dependency on any "
+"(possibly many) implementations of the interface."
+msgstr ""

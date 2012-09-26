@@ -1,0 +1,113 @@
+# Japanese translations for Java EE 6 Hands-on Lab package.
+# Copyright (C) 2012, Arun Gupta
+# This file is distributed under the same license as the Java EE 6 Hands-on Lab package.
+# Toshiaki Maki <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Java EE 6 Hands-on Lab 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-26 20:42\n"
+"PO-Revision-Date: 2012-09-26 20:37+0900\n"
+"Last-Translator: Toshiaki Maki <>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# f3a63aecf6d545cc9d073808df39d311
+#: ../../source/10-caching-using-singleton-ejb.rst:2
+msgid "Caching using Singleton EJB and @Schedule to Pre-fetch Data"
+msgstr "シングルトンEJBと@Scheduleでデータをプリフェッチしたキャッシング"
+
+# 7579891b0787406aa8db87f1e949d080
+#: ../../source/10-caching-using-singleton-ejb.rst:4
+msgid ""
+"The EJB 3.1 specification introduces ``@Singleton`` annotation that creates "
+"a single instance of an EJB per-application and per-JVM. By default, all "
+"methods are thread-safe and transactional. The specifications also "
+"simplifies how to schedule callback methods using calendar-based "
+"expressions. These methods can be invoked at a specified time, after a "
+"specified elapsed duration, or at recurring intervals."
+msgstr ""
+
+# 75f40336bd314f168ac37126f5a52cdd
+#: ../../source/10-caching-using-singleton-ejb.rst:8
+msgid ""
+"This section adds a singleton EJB that can be used to pre-fetch data from "
+"the database at recurring intervals."
+msgstr ""
+
+# f87b31802ae74698b35155edaa705e49
+#: ../../source/10-caching-using-singleton-ejb.rst:10
+msgid ""
+"Right-click on “org.glassfish.samples” package, select “New”, “Session "
+"Bean...”, type the name as “CacheSingletonBean”, and type as “Singleton” as "
+"shown."
+msgstr ""
+
+# c0dc808c7ffd4ab0ae57a0304981e300
+#: ../../source/10-caching-using-singleton-ejb.rst:12
+msgid "And click on OK."
+msgstr ""
+
+# 9438976fbe2a41ea8fb3546d9c233a1c
+#: ../../source/10-caching-using-singleton-ejb.rst:14
+msgid "Add the following class-level annotation:"
+msgstr ""
+
+# bf5092907e664dafa0cba13faeb6abf6
+#: ../../source/10-caching-using-singleton-ejb.rst:20
+msgid ""
+"This will ensure that this singleton bean is loaded eagerly during the "
+"application startup."
+msgstr ""
+
+# c12de17050c64560a36c822929a7e204
+#: ../../source/10-caching-using-singleton-ejb.rst:22
+msgid "Add the following code to the generated class:"
+msgstr ""
+
+# 8064f9cbaeb743e08ecbc3838be3e608
+#: ../../source/10-caching-using-singleton-ejb.rst:39
+msgid "Fix the imports."
+msgstr ""
+
+# b3215089ff9f4d34a2b1852389dac00e
+#: ../../source/10-caching-using-singleton-ejb.rst:41
+msgid ""
+"This code is using previously created ``CustomerSessionBean`` to get the "
+"list of customers. This method has a ``@Schedule`` annotation that takes "
+"cron-like syntax to specify the recurring interval at which the method needs "
+"to be invoked. The GlassFish server log will show messages like:"
+msgstr ""
+
+# 696c323603344213aab06df58713b614
+#: ../../source/10-caching-using-singleton-ejb.rst:52
+msgid ""
+"The log messages show that customer cache is updated every 30 seconds, as "
+"defined by ``@Schedule``."
+msgstr ""
+
+# 7e5a8a51eedb46629b247312b4982869
+#: ../../source/10-caching-using-singleton-ejb.rst:54
+msgid ""
+"The application can now use this singleton bean, instead of "
+"CustomerSessionBean, to get the list of customers such as:"
+msgstr ""
+
+# 1f2ee040dc06438dac515718ccf6dc1b
+#: ../../source/10-caching-using-singleton-ejb.rst:64
+msgid ""
+"Note, ``bean.getCustomers()`` cannot be invoked as it may return null if the "
+"timer event has not occurred yet at least once."
+msgstr ""
+
+# 285f47e31ad14ec3a046e0def6349b2f
+#: ../../source/10-caching-using-singleton-ejb.rst:66
+msgid ""
+"You may consider commenting ``@Schedule`` annotation to avoid flooding the "
+"server log with an output from the ``preFetchCustomers`` method."
+msgstr ""

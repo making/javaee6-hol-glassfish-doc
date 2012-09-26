@@ -1,0 +1,102 @@
+# Japanese translations for Java EE 6 Hands-on Lab package.
+# Copyright (C) 2012, Arun Gupta
+# This file is distributed under the same license as the Java EE 6 Hands-on Lab package.
+# Toshiaki Maki <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Java EE 6 Hands-on Lab 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-26 20:42\n"
+"PO-Revision-Date: 2012-09-26 20:37+0900\n"
+"Last-Translator: Toshiaki Maki <>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# fb5ab9e0888448f4b81a2003f63c32e8
+#: ../../source/06-active-redeploy.rst:2
+msgid "Active Redeploy to Preserve Sessions"
+msgstr "既存のセッションに動的に再デプロイ"
+
+# c3bb7cf3024648d1bc0b185d19d2bcf0
+#: ../../source/06-active-redeploy.rst:4
+msgid ""
+"GlassFish provides support for preserving session state across "
+"redeployments. This feature is called as *Active Redeploy* and works for "
+"HTTP sessions, stateful EJBs, and persistently created EJB timers."
+msgstr ""
+
+# d2edc7725f6f4100aa603d015a5c0f73
+#: ../../source/06-active-redeploy.rst:9
+msgid ""
+"This section will show how Active Redeploy for HTTP sessions, together with "
+"NetBeans auto-deploy, boosts productivity for Java EE 6 application "
+"developers."
+msgstr ""
+
+# 4d402610c9954121a7ef949fdb2b30c9
+#: ../../source/06-active-redeploy.rst:12
+msgid ""
+"In ``TestServlet.java``, add the following code before the database access "
+"code:"
+msgstr ""
+
+# 09883d01363743928f9299fd0a3c69b7
+#: ../../source/06-active-redeploy.rst:27
+msgid ""
+"Fix the imports by taking the defaults. This code stores a session attribute "
+"identifying the number of times a page has been accessed. Refresh the page "
+"“http://localhost:8080/JavaEE6SampleApp/TestServlet” in the browser to see "
+"the output as shown."
+msgstr ""
+
+# 364c4e4d881b485bbdca37d1cfcffbff
+#: ../../source/06-active-redeploy.rst:39
+msgid "The “Timestamp” and “Access count” is displayed on the page."
+msgstr ""
+
+# 6c7add8eaf9b428a97f30b3fd8492dff
+#: ../../source/06-active-redeploy.rst:42
+msgid ""
+"The output from the Servlet may look slightly different based upon where you "
+"copy/pasted the code."
+msgstr ""
+
+# 6a888181ccc345c6a7a0c74eec82e1d2
+#: ../../source/06-active-redeploy.rst:44
+msgid ""
+"Edit ``Customer.java``, change the implementation of the ``toString`` method "
+"to:"
+msgstr ""
+
+# 2bb49777a7474486a5d9e5c93588f05f
+#: ../../source/06-active-redeploy.rst:50
+msgid ""
+"Notice, “[ “ are replaced with “ (“. Save the file. The NetBeans IDE auto-"
+"deploys a Java EE 6 project with every file save. This can be configured in "
+"“Project Properties”, “Run”, and by selecting/unselecting the checkbox "
+"“Deploy on Save” as shown."
+msgstr ""
+
+# 2be3fcaeb490476a8676d6dc13075a0f
+#: ../../source/06-active-redeploy.rst:59
+msgid "The updated output looks like as shown."
+msgstr ""
+
+# 523bb2ae84304ca8a3d53508a9d5eb17
+#: ../../source/06-active-redeploy.rst:63
+msgid ""
+"Notice, that even though the output from the toString is correctly updated, "
+"indicating the app was redeployed successfully, the session access count was "
+"incremented by one. This shows that the session attributes were preserved "
+"across the redeployment. This boosts developer's productivity because HTTP "
+"session, which is where typically application's login information might be "
+"stored, is not invalidated if your application is redeployed. This is an "
+"optional feature and can be disabled by viewing the properties of the "
+"GlassFish server in the “Services” tab of NetBeans and unselecting “Preserve "
+"Sessions Across Redeployment”."
+msgstr ""

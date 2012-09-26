@@ -1,0 +1,201 @@
+# Japanese translations for Java EE 6 Hands-on Lab package.
+# Copyright (C) 2012, Arun Gupta
+# This file is distributed under the same license as the Java EE 6 Hands-on Lab package.
+# Toshiaki Maki <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Java EE 6 Hands-on Lab 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-26 20:42\n"
+"PO-Revision-Date: 2012-09-26 20:37+0900\n"
+"Last-Translator: Toshiaki Maki <>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# cf16a4fd4c7d42b7a30aff4fe018fbf0
+#: ../../source/14-publish-ejb-as-resfull-resource-using-jax-rs.rst:2
+msgid "Publish EJB as a RESTful Resource using JAX-RS"
+msgstr "JAX-RSを用いてEJBをRESTfulなリソースとして公開"
+
+# 33dff9f07fb84fa792943d93b28796f5
+#: ../../source/14-publish-ejb-as-resfull-resource-using-jax-rs.rst:5
+msgid ""
+"The JAX-RS 1.1 specification defines a standard API to provide support for "
+"RESTful Web services in the Java platform. Just like other Java EE 6 "
+"technologies, any POJO can be easily converted into a RESTful resource by "
+"adding the @Path annotation. JAX-RS 1.1 allows an EJB to be published as a "
+"RESTful entity."
+msgstr ""
+
+# 03bd8ad937f34f2d952ba3b76218fc0e
+#: ../../source/14-publish-ejb-as-resfull-resource-using-jax-rs.rst:10
+msgid ""
+"This section publishes an EJB as a RESTful resource. A new method is added "
+"to the EJB which will be invoked when the RESTful resource is accessed using "
+"the HTTP GET method."
+msgstr ""
+
+# 8a57eb1b0b224ce789e9f7bdd1abcf49
+#: ../../source/14-publish-ejb-as-resfull-resource-using-jax-rs.rst:13
+msgid ""
+"In ``CustomerSessionBean.java``, add a class-level @Path annotation to "
+"publish EJB as a RESTful entity. The updated code looks like:"
+msgstr ""
+
+# 1235f95595394a768c63322ca788ae06
+#: ../../source/14-publish-ejb-as-resfull-resource-using-jax-rs.rst:23
+msgid ""
+"The new annotation is highlighted in bold. Resolve the imports by clicking "
+"on the yellow bulb and selecting ``javax.ws.rs.Path``."
+msgstr ""
+
+# 241a6e1302d244f8930daa04cba2c3b0
+#: ../../source/14-publish-ejb-as-resfull-resource-using-jax-rs.rst:25
+msgid "The window shown on the right pops up as soon as you save this file."
+msgstr ""
+
+# f8e61343d76d488fa4e69f94ff89a909
+#: ../../source/14-publish-ejb-as-resfull-resource-using-jax-rs.rst:27
+msgid ""
+"The “REST Resources Path” is the base URI for servicing all requests for "
+"RESTful resources in this web application. The default value of “/resources” "
+"is already used by the .xhtml templates and CSS used by JSF. So change the "
+"value to “/restful” and click on “OK”."
+msgstr ""
+
+# 7274150960294f97a8a6827a7996b0a7
+#: ../../source/14-publish-ejb-as-resfull-resource-using-jax-rs.rst:29
+msgid ""
+"Notice that a new class that extends ``javax.ws.rs.core.Application`` is "
+"generated in the org.netbeans.rest.application.config package. This class "
+"registers the base URI for all the RESTful resources provided by @Path. The "
+"updated base URI is “restful” as can be seen in the generated class."
+msgstr ""
+
+# 7fc6f7b56ee245c8b2254e6ba38e69b5
+#: ../../source/14-publish-ejb-as-resfull-resource-using-jax-rs.rst:32
+msgid "Add the following method to ``CustomerSessionBean.java``:"
+msgstr ""
+
+# fb7ccb95c0e54097a99c436cd13f5c5e
+#: ../../source/14-publish-ejb-as-resfull-resource-using-jax-rs.rst:43
+msgid ""
+"This method is invoked whenever the REST resource is accessed using HTTP GET "
+"and the expected response type is XML."
+msgstr ""
+
+# baf4c1e387b24ccb95ec5fbee045d0e3
+#: ../../source/14-publish-ejb-as-resfull-resource-using-jax-rs.rst:46
+msgid ""
+"Notice the following points: * The @GET annotation ensures that this method "
+"is invoked when the resource is accessed using the HTTP GET method. * The "
+"@Path(“{id}”) defines a sub-resource such that the resource defined by this "
+"method can be accessed at customers/{id} where “id” is the variable part of "
+"the URI and is mapped to the “id” parameter of the method as defined by "
+"@PathParam annotation. * The @Produces annotation ensures that an XML "
+"representation is generated. This will work as @XmlRootElement annotation is "
+"already added to the generated entity."
+msgstr ""
+
+# d98e78f0801c43c7a881f5a8f8966097
+#: ../../source/14-publish-ejb-as-resfull-resource-using-jax-rs.rst:51
+msgid ""
+"Fix the imports by taking the default values for all except for @Produces. "
+"This annotation needs to be resolved from the javax.ws.rs package as shown."
+msgstr ""
+
+# e7c8107fb1ba48d88326769dbc9a8013
+#: ../../source/14-publish-ejb-as-resfull-resource-using-jax-rs.rst:56
+msgid "The RESTful resource is now accessible using the following format:"
+msgstr ""
+
+# 0e766cadae47413ca66620f1d009c2e6
+#: ../../source/14-publish-ejb-as-resfull-resource-using-jax-rs.rst:58
+msgid ""
+"http://<HOST>:<PORT>/ <CONTEXT-ROOT>/<RESOURCE-BASE-URI>/<RESOURCE-URI>/<SUB-"
+"RESOURCE-URI>/<VARIABLE-PART>"
+msgstr ""
+
+# d3674bb35f8744009eea9d196e709cf3
+#: ../../source/14-publish-ejb-as-resfull-resource-using-jax-rs.rst:60
+msgid ""
+"The <CONTEXT-ROOT> is the context root of the web application. The <SUB-"
+"RESOURCE-URI> may be optional in some cases. The <VARIABLE-PART> is the part "
+"that is bound to the parameters in Java method."
+msgstr ""
+
+# fc9a427066f94cdd89f4097b7a98806d
+#: ../../source/14-publish-ejb-as-resfull-resource-using-jax-rs.rst:63
+msgid "In our case, the URI will look like:"
+msgstr ""
+
+# 88568f1138fc4b3886935118ad95f57d
+#: ../../source/14-publish-ejb-as-resfull-resource-using-jax-rs.rst:65
+msgid ""
+"http://localhost:8080/JavaEE6SampleApp/restful/customers/{id} where {id} is "
+"the customer id shown in the JSF page earlier. So accessing “http://"
+"localhost:8080/JavaEE6SampleApp/restful/customers/1” in a browser displays "
+"the output as shown."
+msgstr ""
+
+# 6c943fc8a2e94765b27f92acac2488cb
+#: ../../source/14-publish-ejb-as-resfull-resource-using-jax-rs.rst:69
+msgid ""
+"Accessing this URI in the browser is equivalent to making a GET request to "
+"the service. This can be verified by viewing the HTTP headers generated by "
+"the browsers as shown (“Tools”, “Developer Tools” in Chrome)."
+msgstr ""
+
+# 0e4798694d7843c39c7346d3d1b812fa
+#: ../../source/14-publish-ejb-as-resfull-resource-using-jax-rs.rst:73
+msgid ""
+"Each resource can be represented in multiple formats. Change the "
+"``@Produces`` annotation in  ``CustomerSessionBean.java`` from:"
+msgstr ""
+
+# 8b02fac8e8e2431abe5be81144c5d3df
+#: ../../source/14-publish-ejb-as-resfull-resource-using-jax-rs.rst:79
+msgid "to"
+msgstr ""
+
+# f66c3f29c0164388a3833349a6b3947a
+#: ../../source/14-publish-ejb-as-resfull-resource-using-jax-rs.rst:85
+msgid ""
+"This ensures that an XML or JSON representation of the resource can be "
+"requested by a client. This can be easily verified by giving the following "
+"command (shown in bold) on a command-line:"
+msgstr ""
+
+# 2d26981c1b1442b3a557cc1dc6cf7ece
+#: ../../source/14-publish-ejb-as-resfull-resource-using-jax-rs.rst:112
+msgid "The command is shown in the bold letters."
+msgstr ""
+
+# 1052926dfca0490380d703d937b9e9c0
+#: ../../source/14-publish-ejb-as-resfull-resource-using-jax-rs.rst:113
+msgid "Connection handshake is pre-fixed “*”."
+msgstr ""
+
+# abb13ee3ab214404af20670ed53af1d5
+#: ../../source/14-publish-ejb-as-resfull-resource-using-jax-rs.rst:114
+msgid ""
+"The HTTP request headers are pre-fixed with “>” and response headers with "
+"“<”."
+msgstr ""
+
+# 391c0f33f8f4445c8c998ed8c00955f6
+#: ../../source/14-publish-ejb-as-resfull-resource-using-jax-rs.rst:115
+msgid "The response in JSON format is at the end of the message."
+msgstr ""
+
+# 360459b13204461f98c2971dcb331960
+#: ../../source/14-publish-ejb-as-resfull-resource-using-jax-rs.rst:117
+msgid ""
+"The “curl” utility for Windows-based machines can be downloaded from: http://"
+"curl.haxx.se/."
+msgstr ""

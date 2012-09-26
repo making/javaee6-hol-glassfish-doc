@@ -1,0 +1,108 @@
+# Japanese translations for Java EE 6 Hands-on Lab package.
+# Copyright (C) 2012, Arun Gupta
+# This file is distributed under the same license as the Java EE 6 Hands-on Lab package.
+# Toshiaki Maki <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Java EE 6 Hands-on Lab 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-26 20:42\n"
+"PO-Revision-Date: 2012-09-26 20:37+0900\n"
+"Last-Translator: Toshiaki Maki <>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 07a8e9635a4141c19cb96868ae8d7b8e
+#: ../../source/15-jersey-client-api-to-access-restful-resource.rst:2
+msgid "Jersey Client API to Access the RESTful Resource"
+msgstr "JerseyのクライアントAPIを使用してRESTfulなリソースへアクセス"
+
+# b8efc7b1c37147c891411b8bced8aebd
+#: ../../source/15-jersey-client-api-to-access-restful-resource.rst:4
+msgid ""
+"Jersey is the Reference Implementation of JAX-RS. The Jersey Client API is "
+"an easy-to-use and high-level Java API that can help you write clients for "
+"any HTTP-based RESTful Web service."
+msgstr ""
+
+# 6018b7790ca747c5936fde859501a88a
+#: ../../source/15-jersey-client-api-to-access-restful-resource.rst:8
+msgid ""
+"This section will create a client that will access the RESTful resource "
+"published at the /customers/{id} path."
+msgstr ""
+
+# be5cbe25ba934466ab0ccbd253fee041
+#: ../../source/15-jersey-client-api-to-access-restful-resource.rst:11
+msgid ""
+"Right-click on the project, select “New”, “Java Class...”, give the class "
+"name as “RESTfulClient”, take all other defaults, and click on “Finish”."
+msgstr ""
+
+# dcf7a72eaa9949b7a35cdb902e03d093
+#: ../../source/15-jersey-client-api-to-access-restful-resource.rst:14
+msgid "Add the following code to the generated class:"
+msgstr ""
+
+# c32583a59b8f4a4fa9cb3f1135f92f04
+#: ../../source/15-jersey-client-api-to-access-restful-resource.rst:28
+msgid "Notice the following points:"
+msgstr ""
+
+# 6b6aa5d41fa0488aa7d6bdfbc362e8aa
+#: ../../source/15-jersey-client-api-to-access-restful-resource.rst:30
+msgid ""
+"This code creates a new Jersey client runtime instance. This is an expensive "
+"object and so must be saved if no other configuration is required to access "
+"the resources."
+msgstr ""
+
+# 2efb2358bbce4b2ba21219a675a7dcf3
+#: ../../source/15-jersey-client-api-to-access-restful-resource.rst:31
+msgid ""
+"A new ``WebResource`` is created per RESTful resource that is capable of "
+"building requests to send to the resource and processing responses returned "
+"from the resource. Each ``WebResource`` follows a builder pattern to specify "
+"the required MIME type in the response, application/json in this case."
+msgstr ""
+
+# 0caeb27fe41b4d6996ebd8dfc20fb1b9
+#: ../../source/15-jersey-client-api-to-access-restful-resource.rst:32
+msgid ""
+"A ``LoggingFilter`` is added to the resource to print the request and "
+"response messages."
+msgstr ""
+
+# 1c99d13655894bbea5af17eba537112e
+#: ../../source/15-jersey-client-api-to-access-restful-resource.rst:33
+msgid ""
+"The code then requests a default and JSON representation of the resource in "
+"two separate calls."
+msgstr ""
+
+# 469ab5993e1e4bbe834575a4b1041496
+#: ../../source/15-jersey-client-api-to-access-restful-resource.rst:35
+msgid "Fix the imports by taking all the defaults."
+msgstr ""
+
+# fe0e06400ea14828b83034ea2a98f6b7
+#: ../../source/15-jersey-client-api-to-access-restful-resource.rst:38
+msgid ""
+"Right-click on the file and select “Run File” to see the following output:"
+msgstr ""
+
+# 0186700accf54ff6b1aaaab7ba9e6c8e
+#: ../../source/15-jersey-client-api-to-access-restful-resource.rst:77
+msgid ""
+"The output shows request and response messages to/from the resource. The "
+"first pair of messages is pre-fixed with “1”  and shows the default XML "
+"response coming back. The second pair of messages is pre-fixed with “2” and "
+"shows the “Accept” header going from client to endpoint for content-"
+"negotiation with server. The server understands the expected format and "
+"returns a JSON response."
+msgstr ""

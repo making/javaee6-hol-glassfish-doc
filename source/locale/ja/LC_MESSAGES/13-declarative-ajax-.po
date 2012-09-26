@@ -1,0 +1,237 @@
+# Japanese translations for Java EE 6 Hands-on Lab package.
+# Copyright (C) 2012, Arun Gupta
+# This file is distributed under the same license as the Java EE 6 Hands-on Lab package.
+# Toshiaki Maki <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Java EE 6 Hands-on Lab 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-26 20:42\n"
+"PO-Revision-Date: 2012-09-26 20:37+0900\n"
+"Last-Translator: Toshiaki Maki <>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 25c1476ce36f4f22b69404fb51744500
+#: ../../source/13-declarative-ajax-.rst:2
+msgid "Declarative Ajax to Retrieve Partial Values from the database"
+msgstr "宣言的Ajaxでデーターベースから部分的な値を取得"
+
+# 31200d25a1b443608c8cfdc291dd3472
+#: ../../source/13-declarative-ajax-.rst:4
+msgid ""
+"The JSF2 specification provides standard support for Ajax. It exposes a "
+"standard JavaScript API primarily targeted for use by frameworks as well as "
+"the JSF implementation itself. It also provides a declarative approach that "
+"is more convenient for page authors."
+msgstr ""
+
+# b6c074f3915a43a4b83609e58f43789e
+#: ../../source/13-declarative-ajax-.rst:7
+msgid ""
+"This section will create a new Facelet page to retrieve the list of "
+"customers from the database as their name is typed in the input box using "
+"the declarative ``<f:ajax>``. It will also show how only some elements of "
+"the page can be refreshed, aka partial page refresh."
+msgstr ""
+
+# 8692c4184a0a495b8a09beca837341a3
+#: ../../source/13-declarative-ajax-.rst:10
+msgid ""
+"Create a new Facelets Client Page by right-clicking on the project, select "
+"“New”, “Facelets Template Client ...”, give the file name as “list”, select "
+"the template “WEB-INF/template.xhtml”, take all other defaults and click on "
+"“Finish”."
+msgstr ""
+
+# e705b9e897ee4b1aaf8d8b448801be7f
+#: ../../source/13-declarative-ajax-.rst:13
+msgid "Remove the ``<ui:define>`` elements with name “top and “bottom”."
+msgstr ""
+
+# d2f848e98c974c8eab876007e93a041b
+#: ../../source/13-declarative-ajax-.rst:16
+msgid "Replace the code in ``<ui:define>`` element with “content” name to:"
+msgstr ""
+
+# fe614d01ac98414bb48a3921d8b5dfec
+#: ../../source/13-declarative-ajax-.rst:31
+msgid ""
+"This code displays an input text box and binds it to the “value” property of "
+"“CustomerName” bean (to be defined later). The ``<f:ajax>`` tag attaches "
+"Ajax behavior to the input text box. The meaning of each attribute is "
+"explained in the table below:"
+msgstr ""
+
+# 84343ca9e33d4262a915684de2b2458b
+#: ../../source/13-declarative-ajax-.rst:34
+msgid "Attribute"
+msgstr ""
+
+# 3072b2e1c58f4a98805af9b7be560efb
+#: ../../source/13-declarative-ajax-.rst:34
+msgid "Purpose"
+msgstr ""
+
+# ec60398169154243a6187b150ebf5a16
+#: ../../source/13-declarative-ajax-.rst:36
+msgid "event"
+msgstr ""
+
+# 4f4376a15c4946cb8bae9cc2bf72d275
+#: ../../source/13-declarative-ajax-.rst:36
+msgid ""
+"Event of the applied component for which the Ajax action is fired, "
+"``onkeyup`` in this case."
+msgstr ""
+
+# e5a50baa5b78455b90cf45754c3e8d3a
+#: ../../source/13-declarative-ajax-.rst:38
+msgid "render"
+msgstr ""
+
+# 0e410fa4c1b4469491fb3ade864013eb
+#: ../../source/13-declarative-ajax-.rst:38
+msgid ""
+"List of components that will be rendered after the Ajax action is complete. "
+"This enables “partial page rendering”."
+msgstr ""
+
+# 282d821b9e27400db4a67bfcffbea380
+#: ../../source/13-declarative-ajax-.rst:40
+msgid "listener"
+msgstr ""
+
+# 393f7897a8f94f0cb4a7265e1273018b
+#: ../../source/13-declarative-ajax-.rst:40
+msgid ""
+"Method listening for the Ajax event to be fired. This method must take "
+"``AjaxBehaviorEvent`` as the only parameter and return a void."
+msgstr ""
+
+# 0c7fea5017e943c7a40e4b182ef4fe0c
+#: ../../source/13-declarative-ajax-.rst:43
+msgid ""
+"The ``<h:dataTable>`` is the placeholder for displaying the list of "
+"customers."
+msgstr ""
+
+# 47d13bb7ce634368b741b61570369731
+#: ../../source/13-declarative-ajax-.rst:45
+msgid ""
+"Make sure to fix the namespace/prefix mapping for h and f by clicking on the "
+"yellow bulb in the left side bar."
+msgstr ""
+
+# 72b1293e42af4cb18d13e10e5d673378
+#: ../../source/13-declarative-ajax-.rst:47
+msgid ""
+"Note that the partial view is still rendered on the server. The updated "
+"portion is sent to the browser where the DOM is updated."
+msgstr ""
+
+# 87742fb74d094d9eafffc6cc2139560f
+#: ../../source/13-declarative-ajax-.rst:50
+msgid ""
+"Add a new Java class by right-clicking on the project, selecting “New”, "
+"“Java Class...”, give the name as “CustomerName”. Change the code to:"
+msgstr ""
+
+# db1919ef0d5f459989ad2e5be65693b7
+#: ../../source/13-declarative-ajax-.rst:67
+msgid ""
+"The ``@Model`` annotation is a CDI stereotype that is a simplified way of "
+"saying that the bean is both ``@Named`` and ``@RequestScoped``. A handful of "
+"stereotypes are already pre-defined in the CDI specification and new ones "
+"can be easily defined."
+msgstr ""
+
+# b1384a824f6449b1b16c1ebf3fa7677c
+#: ../../source/13-declarative-ajax-.rst:69
+msgid ""
+"Its important to mark this bean request-scoped otherwise a new instance of "
+"this bean is created for every injection request."
+msgstr ""
+
+# 4bbd9723b79a481680e119444cf9101f
+#: ../../source/13-declarative-ajax-.rst:71
+msgid "Add the following method to ``CustomerSessionBean.java``:"
+msgstr ""
+
+# 3bda306d4b3f49dcb15ed45b14598984
+#: ../../source/13-declarative-ajax-.rst:97
+msgid ""
+"This method is similar to ``getCustomers2`` added earlier. The two "
+"differences are:"
+msgstr ""
+
+# 06380c700ebb45319d974497cc8938bd
+#: ../../source/13-declarative-ajax-.rst:99
+msgid ""
+"The method takes ``AjaxBehaviorEvent`` as the parameter as this is "
+"requirement for the listener attribute of ``<f:ajax>``."
+msgstr ""
+
+# df5c025f22164ae48e2d749e1e9aa9be
+#: ../../source/13-declarative-ajax-.rst:101
+msgid ""
+"The Criteria query specifies a WHERE clause using the JPA2 metamodel that "
+"was generated earlier. The clause narrows down the search results where the "
+"customer's name consists of the string mentioned in the input text box."
+msgstr ""
+
+# b391bb0c257247aea11ff544cf156960
+#: ../../source/13-declarative-ajax-.rst:103
+msgid ""
+"Fix the imports. Make sure ``javax.persistence.criteria.Predicate`` class is "
+"imported, this is not the default."
+msgstr ""
+
+# 77f278c66b2742e3bfcd5eb11fc385fc
+#: ../../source/13-declarative-ajax-.rst:106
+msgid "Inject the customer name as:"
+msgstr ""
+
+# 1eff56359ad841ffaf57b726f022d35e
+#: ../../source/13-declarative-ajax-.rst:112
+msgid "And resolve the import again by taking defaults."
+msgstr ""
+
+# 0c5858668c2b44f7915371b3912a5127
+#: ../../source/13-declarative-ajax-.rst:114
+msgid "Add a new field as:"
+msgstr ""
+
+# 893ee79f7ea14b06a6c4fafb6a297110
+#: ../../source/13-declarative-ajax-.rst:127
+msgid ""
+"Save all the files and open “http://localhost:8080/JavaEE6SampleApp/faces/"
+"list.xhtml” in the browser. The default output looks very familiar as shown."
+msgstr ""
+
+# 8e6b4f07c2f544aeba50ff5f920f4d75
+#: ../../source/13-declarative-ajax-.rst:129
+msgid ""
+"This is because no criteria is specified in the text and so the complete "
+"list is shown."
+msgstr ""
+
+# 868ae7c85aee4b24b02fc77b0da41bcc
+#: ../../source/13-declarative-ajax-.rst:132
+msgid ""
+"If you type “a” in the text box then the list of customers is narrowed down "
+"to the names that contain “a” as shown. Some other sample results are shown "
+"as well."
+msgstr ""
+
+# 4aca36426d514d84878a7f1424ea4154
+#: ../../source/13-declarative-ajax-.rst:136
+msgid ""
+"Notice, all of this is only refreshing the ``<h:dataTable>`` and there by "
+"showing “partial page refresh” or “partial page rendering”."
+msgstr ""

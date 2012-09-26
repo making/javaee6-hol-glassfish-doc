@@ -1,0 +1,127 @@
+# Japanese translations for Java EE 6 Hands-on Lab package.
+# Copyright (C) 2012, Arun Gupta
+# This file is distributed under the same license as the Java EE 6 Hands-on Lab package.
+# Toshiaki Maki <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Java EE 6 Hands-on Lab 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-26 20:42\n"
+"PO-Revision-Date: 2012-09-26 20:37+0900\n"
+"Last-Translator: Toshiaki Maki <>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# ee11e2f783c94533ac1ddff5e2b1c9a2
+#: ../../source/18-observer-pattern-using-cdi-events.rst:2
+msgid "Observer Pattern using CDI Events"
+msgstr "CDIのイベントを利用したオブザーバーパターンの実装"
+
+# 6ec9582fb7774484846133c79f859795
+#: ../../source/18-observer-pattern-using-cdi-events.rst:4
+msgid ""
+"The CDI events follows the Observer pattern. Event producers raise events "
+"that are consumed by observers. The observers can optionally specify a "
+"combination of “selectors” using Qualifiers. The event object can carry "
+"state from producer to consumer. Also the observers can be notified "
+"immediately, or wait until the end of the current transaction."
+msgstr ""
+
+# 82316f5b31b841668e01f11b4319a2ba
+#: ../../source/18-observer-pattern-using-cdi-events.rst:8
+msgid ""
+"This section will explain how to produce/observe a CDI event. The "
+"TestServlet will produce an event if a new customer is added to the "
+"database. The CacheSingletonBean will observe the event and refresh the "
+"cache out of schedule."
+msgstr ""
+
+# 6beec0c97a8f4ff4bc54c5deff3b00eb
+#: ../../source/18-observer-pattern-using-cdi-events.rst:11
+msgid ""
+"Right-click on the project, select “New”, “Java Class...”, and give the name "
+"as “NewCustomerAdded”. Add the following code to this generated class:"
+msgstr ""
+
+# 1878d7316a9b484aba11381530968b3e
+#: ../../source/18-observer-pattern-using-cdi-events.rst:25
+msgid ""
+"This id field is used to communicate the customer identifier that is added "
+"to the database. Alternatively, it can also pass the complete Customer "
+"object and then ``CacheSingletonBean`` can update the cache without querying "
+"the database."
+msgstr ""
+
+# 8dc8b4b5f414423eaa6881ddb3c221b9
+#: ../../source/18-observer-pattern-using-cdi-events.rst:28
+msgid "Inject an event in the “TestServlet” as:"
+msgstr ""
+
+# 9a518008c94f4e6a84edda28c618b3b7
+#: ../../source/18-observer-pattern-using-cdi-events.rst:35
+msgid ""
+"Resolve the imports by choosing the class  ``javax.enterprise.event.Event`` "
+"as shown. Note, this is not the default value."
+msgstr ""
+
+# 4166996053be41a7b72aa50419db8dcc
+#: ../../source/18-observer-pattern-using-cdi-events.rst:38
+msgid ""
+"In the ``TestServlet.processRequest`` method, add the following code "
+"fragment:"
+msgstr ""
+
+# 9df6cb0bb6614625b70a7e79dfa57e06
+#: ../../source/18-observer-pattern-using-cdi-events.rst:44
+msgid ""
+"at the end of the if block that adds a new customer to the database. The "
+"customer identifier is passed as the event state. The if block's updated "
+"fragment looks like:"
+msgstr ""
+
+# 4c099d57676f47479ace3f43a6a37a63
+#: ../../source/18-observer-pattern-using-cdi-events.rst:52
+msgid "The newly added code is highlighted in bold."
+msgstr ""
+
+# c1e668816d0b4e47b0b5a15678275f84
+#: ../../source/18-observer-pattern-using-cdi-events.rst:55
+msgid "Add the following method in the ``CacheSingletonBean.java``:"
+msgstr ""
+
+# 37b71110d7974b1691a5ebaf59519de7
+#: ../../source/18-observer-pattern-using-cdi-events.rst:64
+msgid ""
+"This method listens for the ``NewCustomerAdded`` event published from any "
+"producer, ``TestServlet`` in our case."
+msgstr ""
+
+# 22df68c7bf0e42a6a3620243b2634557
+#: ../../source/18-observer-pattern-using-cdi-events.rst:67
+msgid ""
+"Accessing the URL “http://localhost:8080/JavaEE6SampleApp/TestServlet?add=6” "
+"in a browser, adds a new customer to the database, and displays the output "
+"as shown."
+msgstr ""
+
+# 4384baa8618843be86c24c5fcc476ddc
+#: ../../source/18-observer-pattern-using-cdi-events.rst:69
+msgid "This confirms that the customer is added to the database."
+msgstr ""
+
+# e649883b81df4a099c4b4bce9d86a827
+#: ../../source/18-observer-pattern-using-cdi-events.rst:71
+msgid "The interesting part is shown in the GlassFish server log as:"
+msgstr ""
+
+# 16844f4aad76496aaf65e03a34fac18b
+#: ../../source/18-observer-pattern-using-cdi-events.rst:77
+msgid ""
+"This shows that the event was produced by ``TestServlet`` and observed/"
+"consumed by CacheSingletonBean."
+msgstr ""

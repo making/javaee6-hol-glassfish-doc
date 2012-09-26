@@ -1,0 +1,40 @@
+# Japanese translations for Java EE 6 Hands-on Lab package.
+# Copyright (C) 2012, Arun Gupta
+# This file is distributed under the same license as the Java EE 6 Hands-on Lab package.
+# Toshiaki Maki <>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Java EE 6 Hands-on Lab 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-09-26 20:42\n"
+"PO-Revision-Date: 2012-09-26 20:37+0900\n"
+"Last-Translator: Toshiaki Maki <>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# 25f13735588c4f9e9967a051a80337a7
+#: ../../source/19-conclusion.rst:2
+msgid "Conclusion"
+msgstr "まとめ"
+
+# 4a5e6cf2ebf84e7983c09f19e2b3b3aa
+#: ../../source/19-conclusion.rst:4
+msgid ""
+"This hands-on lab created a typical 3-tier Java EE 6 application using Java "
+"Persistence API (JPA), Servlet, Enterprise JavaBeans (EJB), JavaServer Faces "
+"(JSF), Java API for RESTful Web Services (JAX-RS), Contexts and Dependency "
+"Injection (CDI), and Bean Validation. It also explained how typical design "
+"patterns required in a web application can be easily implemented using these "
+"technologies. Hopefully this has raised your interest enough in trying out "
+"Java EE 6 applications using GlassFish and NetBeans."
+msgstr ""
+
+# 8633e383eeb94beeb8d68905156d6c5d
+#: ../../source/19-conclusion.rst:7
+msgid "Send us feedback at users@glassfish.java.net."
+msgstr ""
