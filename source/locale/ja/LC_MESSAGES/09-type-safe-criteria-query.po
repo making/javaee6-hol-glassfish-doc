@@ -31,6 +31,8 @@ msgid ""
 "statically using an annotation processor following the rules defined by the "
 "specification."
 msgstr ""
+"JPA2の仕様では、永続性ユニットで管理されているクラスの永続状態、関連のメタモデルを表現するMetamodelクラスが定義されています。"
+"正式なメタモデルクラスが、仕様で定められたルールに従って注釈プロセッサにより静的に自動生成されます。"
 
 # 22a094a8043f4104b7bce9c77763cbf7
 #: ../../source/09-type-safe-criteria-query.rst:9
@@ -39,11 +41,13 @@ msgid ""
 "using Critieria API, rather than use of the string-based approach of the "
 "Java Persistence Query Language (JPQL)."
 msgstr ""
+"この抽象的な永続性スキーマはクライテリアAPIを使ってタイプセーフなクエリを記述するために"
+"用いられ、Java Persistence Query Language (JPQL)による文字列ベースなアプローチを対象的です。"
 
 # 663e0fc3c89f4303a6d1b28445bf5550
 #: ../../source/09-type-safe-criteria-query.rst:14
 msgid "This section creates type-safe query using JPA2 Criteria API."
-msgstr ""
+msgstr "このセクションではJPA2のクライテリアAPIを使ってタイプセーフなクエリを作成します。"
 
 # 1ef28c123ba7462aa4587f790e1a6a77
 #: ../../source/09-type-safe-criteria-query.rst:16
@@ -52,6 +56,8 @@ msgid ""
 "metamodel classes for the JPA entities. The project explorer looks like as "
 "shown."
 msgstr ""
+"プロジェクトを右クリックして“Clean and Build”を選択し、JPAエンティティに対するメタモデルクラスを"
+"自動生成してください。プロジェクトエクスプローラーは次のようになります。"
 
 # 26061e93f9fe4522817f6091a7014555
 #: ../../source/09-type-safe-criteria-query.rst:18
@@ -61,23 +67,25 @@ msgid ""
 "classes when the project is built. This is pre-configured in “Project "
 "Properties”, “Libraries”, “Processor” as shown."
 msgstr ""
+"JPA2の仕様で正式なメタモデルを定義しています。NetBeansはプロジェクトがビルドされたときに、"
+"“EclipseLink Canonical Metamodel Generator”を使用してメタモデルを自動生成します。"
 
 # 34f0c71b0bda4e3795e053a606ad9085
 #: ../../source/09-type-safe-criteria-query.rst:22
 msgid "Here is how the generated ``Address_.java`` class looks like:"
-msgstr ""
+msgstr "自動生成された ``Address_.java`` クラスは次のようになります。"
 
 # fc1672f43b844c01b2bff55ad51cae82
 #: ../../source/09-type-safe-criteria-query.rst:41
 msgid ""
 "This class provides the type and cardinality of each field in the Address "
 "entity."
-msgstr ""
+msgstr "このクラスはAddressエンティティの各々のフィールドの型をカーディナリティを提供します。"
 
 # 605ab5f388894c1ca53de40f7f4e19f6
 #: ../../source/09-type-safe-criteria-query.rst:43
 msgid "Add the following code to ``CustomerSessionBean.java``:"
-msgstr ""
+msgstr "次のコードを ``CustomerSessionBean.java`` に追加してください:"
 
 # fbda2fc1d0964fc98c3e2d8d67b65d9b
 #: ../../source/09-type-safe-criteria-query.rst:61
@@ -86,18 +94,20 @@ msgid ""
 "``getCustomers`` method earlier, but uses type-safe Criteria API to query "
 "the database."
 msgstr ""
+"このメソッドは前述の ``getCustomers`` メソッドと同じく、データベースから全ての顧客をリスト形式で返却します。"
+"ただし、データベースへの問い合わせにタイプセーフなクライテリアAPIを使用しています。"
 
 # dc34060edc7b45a7a360f585936eaf13
 #: ../../source/09-type-safe-criteria-query.rst:64
 msgid "The generated metamodel will be used later."
-msgstr ""
+msgstr "自動生成されたメタモデルはこの後使用します。"
 
 # 5d3ecaa8737d4b1ba5f9270d2232c814
 #: ../../source/09-type-safe-criteria-query.rst:67
 msgid ""
 "Note that all the information is specified without any string-based "
 "identifiers."
-msgstr ""
+msgstr "全ての情報が文字列を一切使うことなく指定されていることに着目してください。"
 
 # 3b76bf040c81480aa6e5ad7c05beb2ac
 #: ../../source/09-type-safe-criteria-query.rst:69
@@ -107,22 +117,22 @@ msgstr ""
 # 3d0d42bc0bf84ddea66e907e841573ad
 #: ../../source/09-type-safe-criteria-query.rst:71
 msgid "In “TestServlet.java”, replace the code:"
-msgstr ""
+msgstr "“TestServlet.java”で次のコードを"
 
 # 374423d41c5a4df5a603334a5dd3d08f
 #: ../../source/09-type-safe-criteria-query.rst:77
 msgid "with"
-msgstr ""
+msgstr "次のコードで置き換えてください。"
 
 # 3d5970dfeab44d2985a0fdbf1eb9d991
 #: ../../source/09-type-safe-criteria-query.rst:83
 msgid "Notice the new EJB function is now invoked."
-msgstr ""
+msgstr "これで新しいEJBの機能が呼ばれます。"
 
 # dd86e0be8fd0415eb31be27301776041
 #: ../../source/09-type-safe-criteria-query.rst:85
 msgid "Fix the imports."
-msgstr ""
+msgstr "importを修正してください。"
 
 # d4cdc23c7add418aad59e460e66d943e
 #: ../../source/09-type-safe-criteria-query.rst:87
@@ -130,8 +140,10 @@ msgid ""
 "Refresh the page “http://localhost:8080/JavaEE6SampleApp/TestServlet” in "
 "browser to see an output like:"
 msgstr ""
+"“http://localhost:8080/JavaEE6SampleApp/TestServlet”を再読み込みしてください。"
+"以下の結果がブラウザに表示されます。"
 
 # bdc9af7bbabe47059629f3d429ab8c77
 #: ../../source/09-type-safe-criteria-query.rst:89
 msgid "This confirms that there is no change in the output, as expected."
-msgstr ""
+msgstr "期待した通り、出力結果に変わりはありません。"

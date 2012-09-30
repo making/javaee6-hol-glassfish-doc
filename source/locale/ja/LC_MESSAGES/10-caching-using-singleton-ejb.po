@@ -32,13 +32,18 @@ msgid ""
 "expressions. These methods can be invoked at a specified time, after a "
 "specified elapsed duration, or at recurring intervals."
 msgstr ""
+"EJB 3.1の仕様では ``@Singleton`` アノテーションが導入され、JVM毎、アプリケーション毎に"
+"単一のEJBインスタンスを生成できるようになりました。デフォルトでは全てのメソッドがスレッドセーフであり"
+"トランザクション管理されています。この仕様ではカレンダーベースな表現を使用してスケジュール化された"
+"コールバックメソッドも簡単に定義できます。これらのメソッドは特定の時間や、特定の経過時間後、または"
+"定期的な間隔で実行可能です。"
 
 # 75f40336bd314f168ac37126f5a52cdd
 #: ../../source/10-caching-using-singleton-ejb.rst:8
 msgid ""
 "This section adds a singleton EJB that can be used to pre-fetch data from "
 "the database at recurring intervals."
-msgstr ""
+msgstr "このセクションでは定期的な間隔でデータベースからデータをプリフェッチするシングルトンなEJBを追加します。"
 
 # f87b31802ae74698b35155edaa705e49
 #: ../../source/10-caching-using-singleton-ejb.rst:10
@@ -47,16 +52,18 @@ msgid ""
 "Bean...”, type the name as “CacheSingletonBean”, and type as “Singleton” as "
 "shown."
 msgstr ""
+"“org.glassfish.samples”パッケージを右クリックして, “New”, “Session "
+"Bean...”を選択し、 名前に“CacheSingletonBean”を入力し, 次のように“Singleton”を入力してください。"
 
 # c0dc808c7ffd4ab0ae57a0304981e300
 #: ../../source/10-caching-using-singleton-ejb.rst:12
 msgid "And click on OK."
-msgstr ""
+msgstr "そしてOKをクリックしてください。"
 
 # 9438976fbe2a41ea8fb3546d9c233a1c
 #: ../../source/10-caching-using-singleton-ejb.rst:14
 msgid "Add the following class-level annotation:"
-msgstr ""
+msgstr "クラスに次のアノテーションを追加します。"
 
 # bf5092907e664dafa0cba13faeb6abf6
 #: ../../source/10-caching-using-singleton-ejb.rst:20
@@ -64,16 +71,17 @@ msgid ""
 "This will ensure that this singleton bean is loaded eagerly during the "
 "application startup."
 msgstr ""
+"これにより、アプリケーションが起動する際ににシングルトンBeanがすぐにロードされます。"
 
 # c12de17050c64560a36c822929a7e204
 #: ../../source/10-caching-using-singleton-ejb.rst:22
 msgid "Add the following code to the generated class:"
-msgstr ""
+msgstr "次のコードを生成sれたクラスに追加してください。"
 
 # 8064f9cbaeb743e08ecbc3838be3e608
 #: ../../source/10-caching-using-singleton-ejb.rst:39
 msgid "Fix the imports."
-msgstr ""
+msgstr "importを修正してください。"
 
 # b3215089ff9f4d34a2b1852389dac00e
 #: ../../source/10-caching-using-singleton-ejb.rst:41
@@ -83,6 +91,9 @@ msgid ""
 "cron-like syntax to specify the recurring interval at which the method needs "
 "to be invoked. The GlassFish server log will show messages like:"
 msgstr ""
+"このコードは先ほど作成した ``CustomerSessionBean`` を使用して顧客リストを取得します。"
+"このメドッドは ``@Schedule`` アノテーションをもち、cronライクな文法で繰り返しでメソッドを実行する間隔を指定できます。"
+"GlassFishサーバーのログには次のようなメッセージが出力されます。"
 
 # 696c323603344213aab06df58713b614
 #: ../../source/10-caching-using-singleton-ejb.rst:52
@@ -90,6 +101,7 @@ msgid ""
 "The log messages show that customer cache is updated every 30 seconds, as "
 "defined by ``@Schedule``."
 msgstr ""
+"このログメッセージは顧客情報のキャッシュが ``@Schedule`` で定義されているように、30秒毎に更新されていることを示します。"
 
 # 7e5a8a51eedb46629b247312b4982869
 #: ../../source/10-caching-using-singleton-ejb.rst:54
@@ -97,13 +109,14 @@ msgid ""
 "The application can now use this singleton bean, instead of "
 "CustomerSessionBean, to get the list of customers such as:"
 msgstr ""
+"アプリケーションはCustomerSessionBeanの代わりにこのシングルトンbeanを使用して次のように顧客リストを取得します。"
 
 # 1f2ee040dc06438dac515718ccf6dc1b
 #: ../../source/10-caching-using-singleton-ejb.rst:64
 msgid ""
 "Note, ``bean.getCustomers()`` cannot be invoked as it may return null if the "
 "timer event has not occurred yet at least once."
-msgstr ""
+msgstr "タイマーイベントが一回も呼ばれずにnullが返る場合に``bean.getCustomers()`` が実行されてはいけないことに注意してください。"
 
 # 285f47e31ad14ec3a046e0def6349b2f
 #: ../../source/10-caching-using-singleton-ejb.rst:66
@@ -111,3 +124,4 @@ msgid ""
 "You may consider commenting ``@Schedule`` annotation to avoid flooding the "
 "server log with an output from the ``preFetchCustomers`` method."
 msgstr ""
+"``preFetchCustomers`` メソッドの出力結果でサーバーログが溢れないように ``@Schedule`` の設定値を考慮した方が良いでしょう。"
