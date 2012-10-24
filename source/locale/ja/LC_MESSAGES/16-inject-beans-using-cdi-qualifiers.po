@@ -36,6 +36,9 @@ msgid ""
 "scope and context and then injects it in the requestor. This loose coupling "
 "makes code easier to maintain."
 msgstr ""
+"Contexts and Dependency Injects(CDI)はJava EE 6で追加された新しい仕様です。CDIは依存性の注入に対してタイプセーフなアプローチを提供しています。"
+"この仕様では“強力な型“と“疎結合“を推進しています。beanは型と依存するbeanのセマンティクスのみを定義します。Javaの型システムのみを使用し、文字列ベースの"
+"識別子はありません。注入してほしいbeanは"
 
 # f3707a33fb4d434089dd4a99187b1e81
 #: ../../source/16-inject-beans-using-cdi-qualifiers.rst:6

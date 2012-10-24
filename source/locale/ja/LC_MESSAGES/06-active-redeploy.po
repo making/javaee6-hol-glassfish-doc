@@ -29,6 +29,9 @@ msgid ""
 "redeployments. This feature is called as *Active Redeploy* and works for "
 "HTTP sessions, stateful EJBs, and persistently created EJB timers."
 msgstr ""
+"GlassFishは再デプロイ後もセッションの状態を保持する機能をサポートします。"
+"この機能は *Active Redeploy* と呼ばれ、"
+"HTTPセッション, ステートフルEJB,  EJBタイマーで有効です。"
 
 # d2edc7725f6f4100aa603d015a5c0f73
 #: ../../source/06-active-redeploy.rst:9
@@ -37,6 +40,8 @@ msgid ""
 "NetBeans auto-deploy, boosts productivity for Java EE 6 application "
 "developers."
 msgstr ""
+"このセクションではHTTPセッションに対するActive Redeployが NetBeansと連携して、どうのように "
+"JavaEE6アプリケーション開発者の生産性を向上させるかを示します。"
 
 # 4d402610c9954121a7ef949fdb2b30c9
 #: ../../source/06-active-redeploy.rst:12
@@ -44,6 +49,8 @@ msgid ""
 "In ``TestServlet.java``, add the following code before the database access "
 "code:"
 msgstr ""
+"``TestServlet.java``, でデータベースアクセスの前に次のコードを追記してください :"
+
 
 # 09883d01363743928f9299fd0a3c69b7
 #: ../../source/06-active-redeploy.rst:27
@@ -53,11 +60,13 @@ msgid ""
 "“http://localhost:8080/JavaEE6SampleApp/TestServlet” in the browser to see "
 "the output as shown."
 msgstr ""
+"インポートをFIXしてください。このコードではこのページへのアクセス回数をセッションに保持しています。"
+"“http://localhost:8080/JavaEE6SampleApp/TestServlet” を再読み込みすると次のように表示されます。"
 
 # 364c4e4d881b485bbdca37d1cfcffbff
 #: ../../source/06-active-redeploy.rst:39
 msgid "The “Timestamp” and “Access count” is displayed on the page."
-msgstr ""
+msgstr "“Timestamp” と “Access count” が表示されています。"
 
 # 6c7add8eaf9b428a97f30b3fd8492dff
 #: ../../source/06-active-redeploy.rst:42
@@ -65,6 +74,7 @@ msgid ""
 "The output from the Servlet may look slightly different based upon where you "
 "copy/pasted the code."
 msgstr ""
+"サーブレットの出力結果がコピーアンドペースとしたコードのものと少し違って見えるかもしれません。"
 
 # 6a888181ccc345c6a7a0c74eec82e1d2
 #: ../../source/06-active-redeploy.rst:44
@@ -72,6 +82,7 @@ msgid ""
 "Edit ``Customer.java``, change the implementation of the ``toString`` method "
 "to:"
 msgstr ""
+"``Customer.java`` を編集して ``toString`` メソッドの実装を次のように変更してください: "
 
 # 2bb49777a7474486a5d9e5c93588f05f
 #: ../../source/06-active-redeploy.rst:50
@@ -81,11 +92,14 @@ msgid ""
 "“Project Properties”, “Run”, and by selecting/unselecting the checkbox "
 "“Deploy on Save” as shown."
 msgstr ""
+"“[ “ が “ (“ に置換されていることに着目してください。 ファイルを保存してください。NetBeansは"
+"各ファイルが保存される度に自動的にJava EE 6プロジェクトをデプロイします。この機能は次のように "
+"“Project Properties”, “Run” の “Deploy on Save” をチェックする・しないで設定可能です。"
 
 # 2be3fcaeb490476a8676d6dc13075a0f
 #: ../../source/06-active-redeploy.rst:59
 msgid "The updated output looks like as shown."
-msgstr ""
+msgstr "更新後の出力結果は次のようになります。"
 
 # 523bb2ae84304ca8a3d53508a9d5eb17
 #: ../../source/06-active-redeploy.rst:63
@@ -100,3 +114,9 @@ msgid ""
 "GlassFish server in the “Services” tab of NetBeans and unselecting “Preserve "
 "Sessions Across Redeployment”."
 msgstr ""
+"toStringの結果が正しく更新され、正常に再デプロイされているにも関わらず、"
+"セッション上のアクセス回数がインクリメントされていることに着目してください。"
+"すなわちセッションが再デプロイ後も保存されています。これにHTTPセッション(典型的にログイン情報が保存されている領域)"
+"が再デプロイしても破棄されないため、開発者の生産性を高めます。これはオプションの機能であり、"
+"NetBeansのGlassFishサーバーのプロパティを見て、“Services” タブの"
+"“Preserve Sessions Across Redeployment” を選択を外すことで無効化できます。"
