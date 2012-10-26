@@ -30,11 +30,12 @@ msgid ""
 "``@Stateful``, or ``@Singleton``). No special packaging is required for EJBs "
 "as they can be packaged in a WAR file in the ``WEB-INF/classes`` directory."
 msgstr ""
+"Java EE 6ではEJBの定義とパッケージングが簡素化されています。一つのアノテーション( ``@Stateless`` 、 ``@Stateful`` 、または ``@Singleton`` )を付与するだけでPOJOがEJBに変換されます。EJBはWARファイル内の ``WEB-INF/classes`` ディレクトリにパッケージングされ、特殊なパッケージングは必要ありません。"
 
 # 55bc2b540215421590a106d01ad51a71
 #: ../../source/07-query-database-using-ejb.rst:10
 msgid "This section will create an EJB to query the database."
-msgstr ""
+msgstr "このセクションではデータベースに問い合わせるEJBを作成します。"
 
 # b6669caf717749f2829b1e44c601c1ab
 #: ../../source/07-query-database-using-ejb.rst:12
@@ -43,6 +44,9 @@ msgid ""
 "package, select “New”, “Session Bean...”, specify the EJB Name as "
 "“CustomerSessionBean” as shown. Take all the defaults, and click on “Finish”."
 msgstr ""
+"1ステートレスEJBを新規作成します。”org.glassfish.sample”パッケージで右クリックして、"
+"”New”、”Session Bean…”を選択し、EJB名に”CustomerSessionBean”を入力してください。"
+"以下のように、全てデフォルトのまま”完了”をクリックしてください。"
 
 # 83a1c59dafc648f4b15cd451c536230b
 #: ../../source/07-query-database-using-ejb.rst:19
@@ -51,6 +55,8 @@ msgid ""
 "implements an interface and this single class represents the EJB. This is a "
 "new feature of EJB 3.1."
 msgstr ""
+"これでステートレスEJB  が作成されます。生成されたEJBがインタフェースを実装しておらず、"
+"単一のクラスがEJBを表現していることに着目してください。これはEJB 3.1の新機能です。"
 
 # 06e02ba87d754b3aa363edab46eec701
 #: ../../source/07-query-database-using-ejb.rst:23
@@ -59,6 +65,8 @@ msgid ""
 "``EntityManager``, as opposed to ``EntityManagerFactory`` in the Servlet, as "
 "shown:"
 msgstr ""
+"2EJBは再入可能ではないので、Servletで ``EntityManagerFactory`` をインジェクションしていたのに対し、"
+"以下のように ``EntityManager`` のインスタンスをインジェクションできます。"
 
 # a52ad012024e4974b36c9e7a72fc1f27
 #: ../../source/07-query-database-using-ejb.rst:32
@@ -66,11 +74,12 @@ msgid ""
 "Resolve the imports by right-clicking on the editor pane and selecting “Fix "
 "Imports”."
 msgstr ""
+"エディタパネルを右クリックし、“Fix Imports”を選択し、インポートを解決してください。"
 
 # 055ad1aff1084fb48a7bed378194b86c
 #: ../../source/07-query-database-using-ejb.rst:34
 msgid "Add the following method in the EJB:"
-msgstr ""
+msgstr "EJBに次のメソッドを追加してください。"
 
 # dc02fa0f43f64e36926e820c9fdeec2a
 #: ../../source/07-query-database-using-ejb.rst:42
@@ -78,6 +87,7 @@ msgid ""
 "The implementation here is similar to the code used in the Servlet earlier. "
 "Fix the imports."
 msgstr ""
+"ここでの実装は、先ほどServletで使用したものと似ています。"
 
 # fc93c727ea5e48f8a3e87d77276f9819
 #: ../../source/07-query-database-using-ejb.rst:45
@@ -85,6 +95,7 @@ msgid ""
 "That's all it takes to create an EJB – no deployment descriptors and no "
 "special packaging. In this case the EJB is packaged in a WAR file."
 msgstr ""
+"たったこれだけでEJBを作成できます。デプロイメント記述子や特別なパッケージングは必要ありません。この場合はEJBはWARファイルにパッケージングされます。"
 
 # 22feb552e6ab40139d8640b595e30c98
 #: ../../source/07-query-database-using-ejb.rst:48
@@ -93,18 +104,20 @@ msgid ""
 "that functionality can be delegated to this EJB. This can be done by "
 "replacing the following code from the Servlet:"
 msgstr ""
+"サーブレット中のデータベースアクセスコードをなくせます。"
+"そして、すべての機能がEJBに委譲させることができます。サーブレット中のコードを次のように置換してください。"
 
 # c52336a46be742f3a36cd5196209e454
 # b4bbb3d858654a0db8af20d9e2ee96f5
 #: ../../source/07-query-database-using-ejb.rst:56
 #: ../../source/07-query-database-using-ejb.rst:71
 msgid "with"
-msgstr ""
+msgstr "を"
 
 # 438483202e744592af030bfea3f3c3e9
 #: ../../source/07-query-database-using-ejb.rst:62
 msgid "And replacing the following code:"
-msgstr ""
+msgstr "に。そして次のコードを"
 
 # 8b883338a04e4ba5b40d34f495a14b62
 #: ../../source/07-query-database-using-ejb.rst:78
@@ -112,6 +125,8 @@ msgid ""
 "Notice how an EJB is easily injected using the ``@EJB`` annotation and is "
 "then used to invoke the business method."
 msgstr ""
+"に置換してください。 ``@EJB`` アノテーションを使用することでこんなに簡単にEJBをインジェクションでき、"
+"ビジネスメソッドを呼び出すことができることに着目してください。"
 
 # e3dd0317e4d742f4a0fa87de6689815b
 #: ../../source/07-query-database-using-ejb.rst:81
@@ -119,6 +134,7 @@ msgid ""
 "Refreshing “http://localhost:8080/JavaEE6SampleApp/TestServlet” displays the "
 "output as shown."
 msgstr ""
+"“http://localhost:8080/JavaEE6SampleApp/TestServlet” を再読み込みすれば以下のように表示されます"
 
 # bdb9444af03f44d3b2c004df9ec8c961
 #: ../../source/07-query-database-using-ejb.rst:86
@@ -129,6 +145,11 @@ msgid ""
 "in the database table. Using an EJB, instead of Servlet, will not require to "
 "start and commit a transaction explicitly."
 msgstr ""
+"これは先ほどの出力結果とほとんど同じであり、そこがポイントです。"
+"EJBでは全てのメソッドでトランザクション管理が自動的に行われるため、"
+"データベースアクセスにより向いています。データベースに値を登録するコードを追加"
+"すればこの利点はより明白になるでしょう。サーブレットの代わりにEJBを使用することで"
+"トランザクションの明示的な開始、コミットを行う必要がなくなるでしょう。"
 
 # ccf619f34773435a8641dd976e849443
 #: ../../source/07-query-database-using-ejb.rst:94
@@ -136,3 +157,4 @@ msgid ""
 "The only difference from the previous output is the updated timestamp and "
 "the access count has increased by 1."
 msgstr ""
+"先ほどの出力結果との違いはタイムスタンプが更新されていることと、アクセス回数が1増えていることだけです。"
